@@ -114,9 +114,7 @@ terms:
       scale: 20
       platformDataTypeId: ea625964-ee65-4825-8d1b-87ebbd7baa31
     isBusinessKey: false
-tags:
-  - $view#id#edfe9c89-57e1-4f41-a8c1-d53b6de09472
-  - $view#id#2142fb6b-b215-4238-b0e5-4bd90041a867
+tags: []
 dataflows:
   - id: ed150669-7fac-4c76-b7a0-9297377e1d7e
     name: Dataflow1

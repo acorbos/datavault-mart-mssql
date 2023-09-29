@@ -57,5 +57,4 @@ dataflows:
           - id: 218931f8-21d3-4c70-9ab2-e3372df0e070
             sourceModelObjectId: df81a89a-ae2a-4c32-baaa-8cf561d1819d
             alias: s1
-tags:
-  - $view#id#edfe9c89-57e1-4f41-a8c1-d53b6de09472
+tags: []

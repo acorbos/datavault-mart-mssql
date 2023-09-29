@@ -562,8 +562,7 @@ dataflows:
           - id: b2f9566d-144a-440d-833f-ad8fade10cf3
             sourceModelObjectId: 759a83ea-66f6-4b60-93be-c13557b6327b
             alias: s1
-tags:
-  - $view#id#edfe9c89-57e1-4f41-a8c1-d53b6de09472
+tags: []
 relationships:
   - id: 37409c6c-0b28-4546-a8a9-436bc595a2ed
     referencedModelObjectId: d8775d0a-939e-4758-a1b2-f850968e7a87
