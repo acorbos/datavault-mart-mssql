@@ -37,6 +37,7 @@ views:
       - id: 'd8775d0a-939e-4758-a1b2-f850968e7a87'
       - id: '81866cb7-5d58-49c3-a037-d4cda1b87bb8'
       - id: '62c29db0-10a1-4b01-82df-59b9d9914590'
+      - id: '13032dc0-dd00-42ab-8392-ef68f1fb90f5'
   - id: '2142fb6b-b215-4238-b0e5-4bd90041a867'
     name: 'Sales Information POS'
     type: 'data-pipe'
