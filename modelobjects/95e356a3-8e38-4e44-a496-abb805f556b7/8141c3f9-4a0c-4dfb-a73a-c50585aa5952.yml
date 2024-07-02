@@ -5,39 +5,68 @@ terms:
   - id: 'e8ce05bb-0c8b-4387-afdd-e0d6397d409e'
     name: 'timestamp'
     dataType:
-      platformDataTypeId: 'ee219fec-13ea-493e-9128-39a348ca0995'
+      platformDataTypeId: 'f7afc941-4327-4359-b72f-7f663b794f08'
+    isIdentity: false
     isBusinessKey: false
-    propertyValues: []
+    isForeignKey: false
+    isNullable: true
+    hiddenInSource: false
+    hiddenInTarget: false
   - id: '45b574dd-c414-4eeb-8716-f68a3439c818'
     name: 'Code'
     dataType:
       length: 20
       platformDataTypeId: 'bdf6e2aa-9167-4949-9f69-735bbf516472'
-    isBusinessKey: true
+    isIdentity: false
+    isBusinessKey: false
+    isForeignKey: false
+    isNullable: true
+    hiddenInSource: false
+    hiddenInTarget: false
   - id: 'df93e7cb-eae9-48d2-a137-dbea386b4037'
     name: 'Parent Category'
     dataType:
       length: 20
       platformDataTypeId: 'bdf6e2aa-9167-4949-9f69-735bbf516472'
+    isIdentity: false
     isBusinessKey: false
+    isForeignKey: false
+    isNullable: true
+    hiddenInSource: false
+    hiddenInTarget: false
   - id: '25d6e0ef-cdf5-4a1d-99d5-cf1f247618aa'
     name: 'Description'
     dataType:
       length: 50
       platformDataTypeId: 'bdf6e2aa-9167-4949-9f69-735bbf516472'
+    isIdentity: false
     isBusinessKey: false
+    isForeignKey: false
+    isNullable: true
+    hiddenInSource: false
+    hiddenInTarget: false
   - id: 'a4cc5ab3-ef50-4ed5-92fc-ae1fdcdf19ac'
     name: 'Indentation'
     dataType:
       platformDataTypeId: '9d8d167b-ffbb-4498-8721-de74c859dad5'
+    isIdentity: false
     isBusinessKey: false
+    isForeignKey: false
+    isNullable: true
+    hiddenInSource: false
+    hiddenInTarget: false
   - id: 'a4170fc6-87b1-4939-b4ba-526cd281e94b'
     name: 'Presentation Order'
     dataType:
       platformDataTypeId: '9d8d167b-ffbb-4498-8721-de74c859dad5'
+    isIdentity: false
     isBusinessKey: false
+    isForeignKey: false
+    isNullable: true
+    hiddenInSource: false
+    hiddenInTarget: false
 tags:
-  - '$discovery#id#dcfb76e2-57c3-4849-b250-f7337c2b99d2'
+  - '$discovery#id#dcfb76e2-57c3-4849-b250-f7337c2b99d3'
   - '$initial#name#item_category'
   - '$sourcesystem#id#963df8c5-e464-4584-83f8-ff3734e75456'
 propertyValues: []
