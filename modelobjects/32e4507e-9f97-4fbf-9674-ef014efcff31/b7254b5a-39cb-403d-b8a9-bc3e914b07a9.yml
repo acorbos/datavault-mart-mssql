@@ -1,0 +1,100 @@
+id: 'b7254b5a-39cb-403d-b8a9-bc3e914b07a9'
+name: 'Customer'
+description: 'Generated Model Object from Customer'
+modelObjectTypeId: '32e4507e-9f97-4fbf-9674-ef014efcff31'
+terms:
+  - id: 'dd6e2904-e058-4c16-876e-10a97c2eba82'
+    name: 'BG_SourceSystem'
+    description: 'Default term with an identifier of the source system'
+    dataType:
+      platformDataTypeId: 'bdf6e2aa-9167-4949-9f69-735bbf516472'
+      length: 255
+    defaultTermId: 'c3654f1c-5c92-4200-82ef-baac15ffa0ba'
+    isDefaultTerm: true
+    isIdentity: false
+    isBusinessKey: false
+    isForeignKey: false
+    isNullable: true
+    hiddenInSource: false
+    hiddenInTarget: false
+  - id: '6f3421df-1c9d-4ebf-a36e-0ea1817b6944'
+    name: 'Link_HK'
+    description: 'Identifier of a record'
+    dataType:
+      platformDataTypeId: '77e450ef-2083-4296-a00e-3da0da7ad152'
+      length: 20
+    defaultTermId: '681eef24-7738-4e91-852b-8c53a3197e64'
+    isDefaultTerm: true
+    isIdentity: true
+    isBusinessKey: false
+    isForeignKey: false
+    isNullable: false
+    hiddenInSource: false
+    hiddenInTarget: true
+  - id: '7191e577-8619-4124-9c80-441a8c85535f'
+    name: 'BG_LoadTimestamp'
+    description: 'Default term with the load timestamp'
+    dataType:
+      platformDataTypeId: '88718695-75e5-413d-a8e9-fa27fe064353'
+    defaultTermId: '3fdfd83b-00b6-47e7-b139-9b25993626ac'
+    isDefaultTerm: true
+    isIdentity: false
+    isBusinessKey: false
+    isForeignKey: false
+    isNullable: false
+    hiddenInSource: false
+    hiddenInTarget: true
+  - id: '81ff7647-b2c6-42ae-a913-7c915bd4a261'
+    name: 'FK_Customer_No_'
+    dataType:
+      length: 20
+      platformDataTypeId: 'bdf6e2aa-9167-4949-9f69-735bbf516472'
+    isIdentity: false
+    isBusinessKey: true
+    isForeignKey: true
+    isBusinessKeyForeignKey: true
+    isNullable: true
+    hiddenInSource: false
+    hiddenInTarget: false
+  - id: '3bf51c21-b609-49cb-9ae2-14cf5a29b85b'
+    name: 'Customer_Customer_HK'
+    description: 'Identifier of the referenced Hub record'
+    dataType:
+      platformDataTypeId: '77e450ef-2083-4296-a00e-3da0da7ad152'
+      length: 20
+    defaultTermId: '3e06f270-8fdf-4e8e-80f6-3583cf8bf51c'
+    isDefaultTerm: true
+    isIdentity: false
+    isBusinessKey: false
+    isForeignKey: true
+    isNullable: false
+    hiddenInSource: false
+    hiddenInTarget: true
+    isIdentityForeignKey: true
+dataflows:
+  - id: '90f63cf9-9c1b-48ff-8d2d-6e2f2e1026e9'
+    name: 'Dataflow1'
+    dataflowSets:
+      - id: '20c5a090-fce4-4da8-860d-b196df9c8468'
+        name: 'Set1'
+        termMappings:
+          - termId: 'dd6e2904-e058-4c16-876e-10a97c2eba82'
+          - termId: '6f3421df-1c9d-4ebf-a36e-0ea1817b6944'
+          - termId: '7191e577-8619-4124-9c80-441a8c85535f'
+          - termId: '81ff7647-b2c6-42ae-a913-7c915bd4a261'
+            expression: '0e50229b-2501-4fbd-8679-42c9d9483f0d.81afdf23-9622-488f-83e9-58e777c9abf2'
+          - termId: '3bf51c21-b609-49cb-9ae2-14cf5a29b85b'
+        dataflowModelObjects:
+          - id: '0e50229b-2501-4fbd-8679-42c9d9483f0d'
+            sourceModelObjectId: 'a7269756-1a42-4678-8a99-d82550e835f3'
+            alias: 's1'
+relationships:
+  - id: 'bbccdb0d-d801-4f56-b2aa-2a3b244ee992'
+    referencedModelObjectId: 'a7269756-1a42-4678-8a99-d82550e835f3'
+    role: 'Customer'
+    relationshipTerms:
+      - termId: '81ff7647-b2c6-42ae-a913-7c915bd4a261'
+        referenceTermId: '81afdf23-9622-488f-83e9-58e777c9abf2'
+    additionalTermIds:
+      - '3bf51c21-b609-49cb-9ae2-14cf5a29b85b'
+    propertyValues: []
