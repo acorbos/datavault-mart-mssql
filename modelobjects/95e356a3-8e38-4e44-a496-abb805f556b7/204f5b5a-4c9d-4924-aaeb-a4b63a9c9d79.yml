@@ -5,23 +5,37 @@ terms:
   - id: 'e90f7cce-b615-4c56-8710-75c721bf8fcc'
     name: 'timestamp'
     dataType:
-      platformDataTypeId: 'ee219fec-13ea-493e-9128-39a348ca0995'
+      platformDataTypeId: 'f7afc941-4327-4359-b72f-7f663b794f08'
+    isIdentity: false
     isBusinessKey: false
-    propertyValues: []
+    isForeignKey: false
+    isNullable: true
+    hiddenInSource: false
+    hiddenInTarget: false
   - id: '14af7fac-2dc1-495a-84d0-d4ac4d840ccc'
     name: 'Code'
     dataType:
       length: 20
       platformDataTypeId: 'bdf6e2aa-9167-4949-9f69-735bbf516472'
-    isBusinessKey: true
+    isIdentity: false
+    isBusinessKey: false
+    isForeignKey: false
+    isNullable: true
+    hiddenInSource: false
+    hiddenInTarget: false
   - id: 'e866df45-4721-4008-be10-b0b98dbd991c'
     name: 'Description'
     dataType:
       length: 50
       platformDataTypeId: 'bdf6e2aa-9167-4949-9f69-735bbf516472'
+    isIdentity: false
     isBusinessKey: false
+    isForeignKey: false
+    isNullable: true
+    hiddenInSource: false
+    hiddenInTarget: false
 tags:
-  - '$discovery#id#dcfb76e2-57c3-4849-b250-f7337c2b99d2'
+  - '$discovery#id#dcfb76e2-57c3-4849-b250-f7337c2b99d3'
   - '$initial#name#customer_discount_group'
   - '$sourcesystem#id#963df8c5-e464-4584-83f8-ff3734e75456'
 propertyValues: []
