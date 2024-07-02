@@ -9,10 +9,6 @@ views:
         x: 708
         'y': 326
         collapsed: true
-      - id: 'c5c50f0c-8a24-43b9-9246-72d0cf8acfad'
-        x: 254
-        'y': 144
-        collapsed: true
       - id: 'a61e854c-5ba1-4e99-9178-2f199e6c2711'
         x: 704
         'y': 144
@@ -41,7 +37,6 @@ views:
       - id: '41aad21e-c17d-4872-975a-adfa315dee13'
       - id: '5aa8afc1-f299-4b7d-8263-a5b932da2903'
       - id: '8141c3f9-4a0c-4dfb-a73a-c50585aa5952'
-      - id: 'c5c50f0c-8a24-43b9-9246-72d0cf8acfad'
       - id: '1b31df90-a5ec-40ad-8ebd-3ba2c4f96cc2'
       - id: 'a7269756-1a42-4678-8a99-d82550e835f3'
       - id: 'd8775d0a-939e-4758-a1b2-f850968e7a87'
@@ -61,5 +56,4 @@ views:
       - id: 'ee1d26fd-9d08-4099-9bad-a08fb9aa11b5'
       - id: '62c29db0-10a1-4b01-82df-59b9d9914590'
       - id: '13032dc0-dd00-42ab-8392-ef68f1fb90f5'
-      - id: 'c5c50f0c-8a24-43b9-9246-72d0cf8acfad'
       - id: 'a61e854c-5ba1-4e99-9178-2f199e6c2711'
