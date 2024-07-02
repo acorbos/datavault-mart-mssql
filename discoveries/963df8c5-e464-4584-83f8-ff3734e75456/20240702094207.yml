@@ -1,0 +1,5025 @@
+id: 'dcfb76e2-57c3-4849-b250-f7337c2b99d3'
+name: 'Dynamics'
+description: 'Sales Info'
+timestamp: '2024-07-02T09:42:07+00:00'
+sourceSystem:
+  type: 'Microsoft Sql Server'
+  version: '2017'
+sourceObjects:
+  - name: 'Customer'
+    fullyQualifiedName: 'CRONUS International Ltd_$Customer'
+    objectType:
+      name: 'table'
+    terms:
+      - name: 'timestamp'
+        sourceDataType:
+          name: 'timestamp'
+        dataType:
+          name: 'timestamp'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Name'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Search Name'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Name 2'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Address'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Address 2'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'City'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 30
+        dataType:
+          name: 'nvarchar'
+          length: 30
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Contact'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Phone No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 30
+        dataType:
+          name: 'nvarchar'
+          length: 30
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Telex No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Document Sending Profile'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Our Account No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Territory Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Global Dimension 1 Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Global Dimension 2 Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Chain Name'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Budgeted Amount'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Credit Limit (LCY)'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Customer Posting Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Currency Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Customer Price Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Language Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Statistics Group'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Payment Terms Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Fin_ Charge Terms Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Salesperson Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Shipment Method Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Shipping Agent Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Place of Export'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Invoice Disc_ Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Customer Disc_ Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Country_Region Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Collection Method'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Amount'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Blocked'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Invoice Copies'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Last Statement No_'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Print Statements'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Bill-to Customer No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Priority'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Payment Method Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Last Date Modified'
+        sourceDataType:
+          name: 'datetime'
+        dataType:
+          name: 'datetime'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Application Method'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Prices Including VAT'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Location Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Fax No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 30
+        dataType:
+          name: 'nvarchar'
+          length: 30
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Telex Answer Back'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'VAT Registration No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Combine Shipments'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Gen_ Bus_ Posting Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Picture'
+        sourceDataType:
+          name: 'image'
+        dataType:
+          name: 'image'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'GLN'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 13
+        dataType:
+          name: 'nvarchar'
+          length: 13
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Post Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'County'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 30
+        dataType:
+          name: 'nvarchar'
+          length: 30
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'E-Mail'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 80
+        dataType:
+          name: 'nvarchar'
+          length: 80
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Home Page'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 80
+        dataType:
+          name: 'nvarchar'
+          length: 80
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Reminder Terms Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'No_ Series'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Tax Area Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Tax Liable'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'VAT Bus_ Posting Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Reserve'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Block Payment Tolerance'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'IC Partner Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Prepayment _'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Partner Type'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Image'
+        sourceDataType:
+          name: 'uniqueidentifier'
+        dataType:
+          name: 'uniqueidentifier'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Preferred Bank Account Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Cash Flow Payment Terms Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Primary Contact No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Responsibility Center'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Shipping Advice'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Shipping Time'
+        sourceDataType:
+          name: 'varchar'
+          length: 32
+        dataType:
+          name: 'varchar'
+          length: 32
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Shipping Agent Service Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Service Zone Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Allow Line Disc_'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Base Calendar Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Copy Sell-to Addr_ to Qte From'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+  - name: 'Customer Discount Group'
+    fullyQualifiedName: 'CRONUS International Ltd_$Customer Discount Group'
+    objectType:
+      name: 'table'
+    terms:
+      - name: 'timestamp'
+        sourceDataType:
+          name: 'timestamp'
+        dataType:
+          name: 'timestamp'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Description'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+  - name: 'Item'
+    fullyQualifiedName: 'CRONUS International Ltd_$Item'
+    objectType:
+      name: 'table'
+    terms:
+      - name: 'timestamp'
+        sourceDataType:
+          name: 'timestamp'
+        dataType:
+          name: 'timestamp'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'No_ 2'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Description'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Search Description'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Description 2'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Base Unit of Measure'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Price Unit Conversion'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Type'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Inventory Posting Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Shelf No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Item Disc_ Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Allow Invoice Disc_'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Statistics Group'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Commission Group'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Unit Price'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Price_Profit Calculation'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Profit _'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Costing Method'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Unit Cost'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Standard Cost'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Last Direct Cost'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Indirect Cost _'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Cost is Adjusted'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Allow Online Adjustment'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Vendor No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Vendor Item No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Lead Time Calculation'
+        sourceDataType:
+          name: 'varchar'
+          length: 32
+        dataType:
+          name: 'varchar'
+          length: 32
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Reorder Point'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Maximum Inventory'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Reorder Quantity'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Alternative Item No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Unit List Price'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Duty Due _'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Duty Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Gross Weight'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Net Weight'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Units per Parcel'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Unit Volume'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Durability'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Freight Type'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Tariff No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Duty Unit Conversion'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Country_Region Purchased Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Budget Quantity'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Budgeted Amount'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Budget Profit'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Blocked'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Last Date Modified'
+        sourceDataType:
+          name: 'datetime'
+        dataType:
+          name: 'datetime'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Last Time Modified'
+        sourceDataType:
+          name: 'datetime'
+        dataType:
+          name: 'datetime'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Price Includes VAT'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'VAT Bus_ Posting Gr_ (Price)'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Gen_ Prod_ Posting Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Picture'
+        sourceDataType:
+          name: 'uniqueidentifier'
+        dataType:
+          name: 'uniqueidentifier'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Country_Region of Origin Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Automatic Ext_ Texts'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'No_ Series'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Tax Group Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'VAT Prod_ Posting Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Reserve'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Global Dimension 1 Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Global Dimension 2 Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Stockout Warning'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Prevent Negative Inventory'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Application Wksh_ User ID'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 128
+        dataType:
+          name: 'nvarchar'
+          length: 128
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Assembly Policy'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'GTIN'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 14
+        dataType:
+          name: 'nvarchar'
+          length: 14
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Default Deferral Template Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Low-Level Code'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Lot Size'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Serial Nos_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Last Unit Cost Calc_ Date'
+        sourceDataType:
+          name: 'datetime'
+        dataType:
+          name: 'datetime'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Rolled-up Material Cost'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Rolled-up Capacity Cost'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Scrap _'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Inventory Value Zero'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Discrete Order Quantity'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Minimum Order Quantity'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Maximum Order Quantity'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Safety Stock Quantity'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Order Multiple'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Safety Lead Time'
+        sourceDataType:
+          name: 'varchar'
+          length: 32
+        dataType:
+          name: 'varchar'
+          length: 32
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Flushing Method'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Replenishment System'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Rounding Precision'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Sales Unit of Measure'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Purch_ Unit of Measure'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Time Bucket'
+        sourceDataType:
+          name: 'varchar'
+          length: 32
+        dataType:
+          name: 'varchar'
+          length: 32
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Reordering Policy'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Include Inventory'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Manufacturing Policy'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Rescheduling Period'
+        sourceDataType:
+          name: 'varchar'
+          length: 32
+        dataType:
+          name: 'varchar'
+          length: 32
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Lot Accumulation Period'
+        sourceDataType:
+          name: 'varchar'
+          length: 32
+        dataType:
+          name: 'varchar'
+          length: 32
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Dampener Period'
+        sourceDataType:
+          name: 'varchar'
+          length: 32
+        dataType:
+          name: 'varchar'
+          length: 32
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Dampener Quantity'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Overflow Level'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Manufacturer Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Item Category Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Created From Nonstock Item'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Product Group Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Service Item Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Item Tracking Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Lot Nos_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Expiration Calculation'
+        sourceDataType:
+          name: 'varchar'
+          length: 32
+        dataType:
+          name: 'varchar'
+          length: 32
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Warehouse Class Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Special Equipment Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Put-away Template Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Put-away Unit of Measure Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Phys Invt Counting Period Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Last Counting Period Update'
+        sourceDataType:
+          name: 'datetime'
+        dataType:
+          name: 'datetime'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Use Cross-Docking'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Next Counting Start Date'
+        sourceDataType:
+          name: 'datetime'
+        dataType:
+          name: 'datetime'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Next Counting End Date'
+        sourceDataType:
+          name: 'datetime'
+        dataType:
+          name: 'datetime'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Routing No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Production BOM No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Single-Level Material Cost'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Single-Level Capacity Cost'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Single-Level Subcontrd_ Cost'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Single-Level Cap_ Ovhd Cost'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Single-Level Mfg_ Ovhd Cost'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Overhead Rate'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Rolled-up Subcontracted Cost'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Rolled-up Mfg_ Ovhd Cost'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Rolled-up Cap_ Overhead Cost'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Order Tracking Policy'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Critical'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Common Item No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+  - name: 'Item Category'
+    fullyQualifiedName: 'CRONUS International Ltd_$Item Category'
+    objectType:
+      name: 'table'
+    terms:
+      - name: 'timestamp'
+        sourceDataType:
+          name: 'timestamp'
+        dataType:
+          name: 'timestamp'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Parent Category'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Description'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Indentation'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Presentation Order'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+  - name: 'Location'
+    fullyQualifiedName: 'CRONUS International Ltd_$Location'
+    objectType:
+      name: 'table'
+    terms:
+      - name: 'timestamp'
+        sourceDataType:
+          name: 'timestamp'
+        dataType:
+          name: 'timestamp'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Name'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Default Bin Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Name 2'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Address'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Address 2'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'City'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 30
+        dataType:
+          name: 'nvarchar'
+          length: 30
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Phone No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 30
+        dataType:
+          name: 'nvarchar'
+          length: 30
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Phone No_ 2'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 30
+        dataType:
+          name: 'nvarchar'
+          length: 30
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Telex No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 30
+        dataType:
+          name: 'nvarchar'
+          length: 30
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Fax No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 30
+        dataType:
+          name: 'nvarchar'
+          length: 30
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Contact'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Post Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'County'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 30
+        dataType:
+          name: 'nvarchar'
+          length: 30
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'E-Mail'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 80
+        dataType:
+          name: 'nvarchar'
+          length: 80
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Home Page'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 90
+        dataType:
+          name: 'nvarchar'
+          length: 90
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Country_Region Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Use As In-Transit'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Require Put-away'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Require Pick'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Cross-Dock Due Date Calc_'
+        sourceDataType:
+          name: 'varchar'
+          length: 32
+        dataType:
+          name: 'varchar'
+          length: 32
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Use Cross-Docking'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Require Receive'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Require Shipment'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Bin Mandatory'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Directed Put-away and Pick'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Default Bin Selection'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Outbound Whse_ Handling Time'
+        sourceDataType:
+          name: 'varchar'
+          length: 32
+        dataType:
+          name: 'varchar'
+          length: 32
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Inbound Whse_ Handling Time'
+        sourceDataType:
+          name: 'varchar'
+          length: 32
+        dataType:
+          name: 'varchar'
+          length: 32
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Put-away Template Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Use Put-away Worksheet'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Pick According to FEFO'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Allow Breakbulk'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Bin Capacity Policy'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Open Shop Floor Bin Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'To-Production Bin Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'From-Production Bin Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Adjustment Bin Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Always Create Put-away Line'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Always Create Pick Line'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Special Equipment'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Receipt Bin Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Shipment Bin Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Cross-Dock Bin Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'To-Assembly Bin Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'From-Assembly Bin Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Asm_-to-Order Shpt_ Bin Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Base Calendar Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Use ADCS'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+  - name: 'Sales Invoice Header'
+    fullyQualifiedName: 'CRONUS International Ltd_$Sales Invoice Header'
+    objectType:
+      name: 'table'
+    terms:
+      - name: 'timestamp'
+        sourceDataType:
+          name: 'timestamp'
+        dataType:
+          name: 'timestamp'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Sell-to Customer No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Bill-to Customer No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Bill-to Name'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Bill-to Name 2'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Bill-to Address'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Bill-to Address 2'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Bill-to City'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 30
+        dataType:
+          name: 'nvarchar'
+          length: 30
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Bill-to Contact'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Your Reference'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 35
+        dataType:
+          name: 'nvarchar'
+          length: 35
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Ship-to Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Ship-to Name'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Ship-to Name 2'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Ship-to Address'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Ship-to Address 2'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Ship-to City'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 30
+        dataType:
+          name: 'nvarchar'
+          length: 30
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Ship-to Contact'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Order Date'
+        sourceDataType:
+          name: 'datetime'
+        dataType:
+          name: 'datetime'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Posting Date'
+        sourceDataType:
+          name: 'datetime'
+        dataType:
+          name: 'datetime'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Shipment Date'
+        sourceDataType:
+          name: 'datetime'
+        dataType:
+          name: 'datetime'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Posting Description'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Payment Terms Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Due Date'
+        sourceDataType:
+          name: 'datetime'
+        dataType:
+          name: 'datetime'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Payment Discount _'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Pmt_ Discount Date'
+        sourceDataType:
+          name: 'datetime'
+        dataType:
+          name: 'datetime'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Shipment Method Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Location Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Shortcut Dimension 1 Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Shortcut Dimension 2 Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Customer Posting Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Currency Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Currency Factor'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Customer Price Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Prices Including VAT'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Invoice Disc_ Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Customer Disc_ Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Language Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Salesperson Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Order No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'No_ Printed'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'On Hold'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 3
+        dataType:
+          name: 'nvarchar'
+          length: 3
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Applies-to Doc_ Type'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Applies-to Doc_ No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Bal_ Account No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'VAT Registration No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Reason Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Gen_ Bus_ Posting Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'EU 3-Party Trade'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Transaction Type'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Transport Method'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'VAT Country_Region Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Sell-to Customer Name'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Sell-to Customer Name 2'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Sell-to Address'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Sell-to Address 2'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Sell-to City'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 30
+        dataType:
+          name: 'nvarchar'
+          length: 30
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Sell-to Contact'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Bill-to Post Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Bill-to County'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 30
+        dataType:
+          name: 'nvarchar'
+          length: 30
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Bill-to Country_Region Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Sell-to Post Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Sell-to County'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 30
+        dataType:
+          name: 'nvarchar'
+          length: 30
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Sell-to Country_Region Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Ship-to Post Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Ship-to County'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 30
+        dataType:
+          name: 'nvarchar'
+          length: 30
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Ship-to Country_Region Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Bal_ Account Type'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Exit Point'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Correction'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Document Date'
+        sourceDataType:
+          name: 'datetime'
+        dataType:
+          name: 'datetime'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'External Document No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 35
+        dataType:
+          name: 'nvarchar'
+          length: 35
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Area'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Transaction Specification'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Payment Method Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Shipping Agent Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Package Tracking No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 30
+        dataType:
+          name: 'nvarchar'
+          length: 30
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Pre-Assigned No_ Series'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'No_ Series'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Order No_ Series'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Pre-Assigned No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'User ID'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Source Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Tax Area Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Tax Liable'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'VAT Bus_ Posting Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'VAT Base Discount _'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Prepayment No_ Series'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Prepayment Invoice'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Prepayment Order No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Quote No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Work Description'
+        sourceDataType:
+          name: 'image'
+        dataType:
+          name: 'image'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Dimension Set ID'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Payment Service Set ID'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Document Exchange Identifier'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Document Exchange Status'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Doc_ Exch_ Original Identifier'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Coupled to CRM'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Direct Debit Mandate ID'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 35
+        dataType:
+          name: 'nvarchar'
+          length: 35
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Cust_ Ledger Entry No_'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Campaign No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Sell-to Contact No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Bill-to Contact No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Opportunity No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Responsibility Center'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Allow Line Disc_'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Get Shipment Used'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+  - name: 'Sales Invoice Line'
+    fullyQualifiedName: 'CRONUS International Ltd_$Sales Invoice Line'
+    objectType:
+      name: 'table'
+    terms:
+      - name: 'timestamp'
+        sourceDataType:
+          name: 'timestamp'
+        dataType:
+          name: 'timestamp'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Document No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Line No_'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Sell-to Customer No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Type'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Location Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Posting Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Shipment Date'
+        sourceDataType:
+          name: 'datetime'
+        dataType:
+          name: 'datetime'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Description'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Description 2'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 50
+        dataType:
+          name: 'nvarchar'
+          length: 50
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Unit of Measure'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Quantity'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Unit Price'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Unit Cost (LCY)'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'VAT _'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Line Discount _'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Line Discount Amount'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Amount'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Amount Including VAT'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Allow Invoice Disc_'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Gross Weight'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Net Weight'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Units per Parcel'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Unit Volume'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Appl_-to Item Entry'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Shortcut Dimension 1 Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Shortcut Dimension 2 Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Customer Price Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Job No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Work Type Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Shipment No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Shipment Line No_'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Bill-to Customer No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Inv_ Discount Amount'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Drop Shipment'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Gen_ Bus_ Posting Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Gen_ Prod_ Posting Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'VAT Calculation Type'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Transaction Type'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Transport Method'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Attached to Line No_'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Exit Point'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Area'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Transaction Specification'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Tax Category'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Tax Area Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Tax Liable'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Tax Group Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'VAT Clause Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'VAT Bus_ Posting Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'VAT Prod_ Posting Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Blanket Order No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Blanket Order Line No_'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'VAT Base Amount'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Unit Cost'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'System-Created Entry'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Line Amount'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'VAT Difference'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'VAT Identifier'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'IC Partner Ref_ Type'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'IC Partner Reference'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Prepayment Line'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'IC Partner Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Posting Date'
+        sourceDataType:
+          name: 'datetime'
+        dataType:
+          name: 'datetime'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Dimension Set ID'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Job Task No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Job Contract Entry No_'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Deferral Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Variant Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Bin Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Qty_ per Unit of Measure'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Unit of Measure Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Quantity (Base)'
+        sourceDataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        dataType:
+          name: 'decimal'
+          scale: 20
+          precision: 38
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'FA Posting Date'
+        sourceDataType:
+          name: 'datetime'
+        dataType:
+          name: 'datetime'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Depreciation Book Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Depr_ until FA Posting Date'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Duplicate in Depreciation Book'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Use Duplication List'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Responsibility Center'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Cross-Reference No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Unit of Measure (Cross Ref_)'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Cross-Reference Type'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Cross-Reference Type No_'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 30
+        dataType:
+          name: 'nvarchar'
+          length: 30
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Item Category Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Nonstock'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Purchasing Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Product Group Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Appl_-from Item Entry'
+        sourceDataType:
+          name: 'int'
+        dataType:
+          name: 'int'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Return Reason Code'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 10
+        dataType:
+          name: 'nvarchar'
+          length: 10
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Allow Line Disc_'
+        sourceDataType:
+          name: 'tinyint'
+        dataType:
+          name: 'tinyint'
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
+      - name: 'Customer Disc_ Group'
+        sourceDataType:
+          name: 'nvarchar'
+          length: 20
+        dataType:
+          name: 'nvarchar'
+          length: 20
+        isIdentity: false
+        isBusinessKey: false
+        isForeignKey: false
+        isDefaultTerm: false
