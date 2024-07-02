@@ -3,7 +3,7 @@ description: 'product-launch-event'
 id: 'f4af988b-6568-4aee-2bb3-08db50014549'
 configuration:
   id: 'biGENIUS.Implementation.Generator.VaultAndMart.Mssql'
-  version: '1.7.0-beta001untested'
+  version: '1.7.0-beta002untested'
 sourceSystems:
   - name: 'erp'
     description: 'ERP'
