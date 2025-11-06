@@ -1,6 +1,7 @@
 id: 'f4af988b-6568-4aee-2bb3-08db50014549'
 name: 'Product Launch Event'
 description: 'product-launch-event'
+artifactsFolderStructure: 'oneFolder'
 version: 'v1.7'
 configuration:
   id: 'biGENIUS.Implementation.Generator.VaultAndMart.Mssql'
