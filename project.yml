@@ -5,7 +5,7 @@ artifactsFolderStructure: 'oneFolder'
 version: 'v1.7'
 configuration:
   id: 'biGENIUS.Implementation.Generator.VaultAndMart.Mssql'
-  version: '1.11.0-beta001untested'
+  version: '1.11.0-beta088'
 sourceSystems:
   - id: 'cbdf229a-4dce-47e1-81a5-71e4bee0edb5'
     name: 'Blackforest Markets'
