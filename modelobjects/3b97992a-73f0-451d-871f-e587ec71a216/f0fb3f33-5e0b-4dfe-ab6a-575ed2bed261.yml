@@ -225,6 +225,17 @@ terms:
     dataType:
       length: 255
       platformDataTypeId: 'bdf6e2aa-9167-4949-9f69-735bbf516472'
+  - id: '940bee4d-6a84-4b80-8d34-5428e58afa30'
+    name: 'FK_EMPLOYEE_EMPLOYEE_Hub_secondBKTerm'
+    hiddenInSource: false
+    hiddenInTarget: false
+    isBusinessKey: false
+    isBusinessKeyForeignKey: true
+    isForeignKey: true
+    isIdentity: false
+    isNullable: true
+    dataType:
+      platformDataTypeId: '836defb7-f4e4-4130-97c4-afec95a59be8'
 dataflows:
   - id: 'ca303a44-ab0f-42bd-9c2f-46547a2f4d13'
     name: 'Dataflow1'
@@ -262,6 +273,7 @@ dataflows:
           - termId: '224f9059-2c6b-4b43-83ef-8d0048dfa32d'
           - termId: '1ea17765-a716-4883-a8e6-0ac1b16f7940'
           - termId: 'fdb0db54-230a-49e8-968a-e562fa1ab1ff'
+          - termId: '940bee4d-6a84-4b80-8d34-5428e58afa30'
 relationships:
   - id: 'b9c7566d-9879-49d1-bc82-8df2610aa742'
     referencedModelObjectId: 'bc6f307f-bc3e-4bcf-8dee-704c0ed78d41'
@@ -270,4 +282,6 @@ relationships:
     relationshipTerms:
       - referenceTermId: '49fb2e21-e13e-4365-b7b4-912807a14704'
         termId: '1122c96e-7f46-4c47-8ab3-eb15f76ae91c'
+      - referenceTermId: '4bd9b3fd-2730-48ee-a75d-0bbc62b10034'
+        termId: '940bee4d-6a84-4b80-8d34-5428e58afa30'
     propertyValues: []
