@@ -61,13 +61,14 @@ terms:
     name: 'FIRST_NAME'
     hiddenInSource: false
     hiddenInTarget: false
-    isBusinessKey: true
+    isBusinessKey: false
     isForeignKey: false
     isIdentity: false
     isNullable: true
     dataType:
       length: 100
       platformDataTypeId: '9245c3e9-05f8-4e48-962c-e1b3c49bc239'
+    propertyValues: []
   - id: '6a127383-b6cc-46bf-982e-99cbec0c55ad'
     name: 'Name'
     hiddenInSource: false
