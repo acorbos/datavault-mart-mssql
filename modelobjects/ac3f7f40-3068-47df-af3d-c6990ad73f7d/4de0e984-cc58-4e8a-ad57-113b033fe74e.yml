@@ -49,13 +49,14 @@ terms:
     name: 'LAST_NAME'
     hiddenInSource: false
     hiddenInTarget: false
-    isBusinessKey: true
+    isBusinessKey: false
     isForeignKey: false
     isIdentity: false
     isNullable: true
     dataType:
       length: 100
       platformDataTypeId: '9245c3e9-05f8-4e48-962c-e1b3c49bc239'
+    propertyValues: []
   - id: '5323ad16-034d-408c-9602-d8dfe5cade60'
     name: 'FIRST_NAME'
     hiddenInSource: false
