@@ -1,0 +1,88 @@
+id: '4de0e984-cc58-4e8a-ad57-113b033fe74e'
+name: 'EMPLOYEE1'
+description: 'Generated Model Object from EMPLOYEE'
+isDeactivated: false
+modelObjectTypeId: 'ac3f7f40-3068-47df-af3d-c6990ad73f7d'
+terms:
+  - id: '40880139-8335-45b8-b8d6-5fa143ec9d46'
+    name: 'BG_LoadTimestamp'
+    description: 'Default term with the load timestamp'
+    defaultTermId: '3fdfd83b-00b6-47e7-b139-9b25993626ac'
+    hiddenInSource: false
+    hiddenInTarget: true
+    isBusinessKey: false
+    isDefaultTerm: true
+    isForeignKey: false
+    isIdentity: false
+    isNullable: false
+    dataType:
+      platformDataTypeId: '88718695-75e5-413d-a8e9-fa27fe064353'
+  - id: 'efe4d1bd-f1db-4392-9697-ee1128879d85'
+    name: 'Hub_HK'
+    description: 'Identifier of a record'
+    defaultTermId: '2689505b-2079-48b5-9fea-60ac633b04fe'
+    hiddenInSource: false
+    hiddenInTarget: true
+    isBusinessKey: false
+    isDefaultTerm: true
+    isForeignKey: false
+    isIdentity: true
+    isNullable: false
+    dataType:
+      length: 20
+      platformDataTypeId: '77e450ef-2083-4296-a00e-3da0da7ad152'
+  - id: '5c905eca-8a67-4d85-884c-9a02519ac413'
+    name: 'BG_SourceSystem'
+    description: 'Default term with an identifier of the source system'
+    defaultTermId: 'c3654f1c-5c92-4200-82ef-baac15ffa0ba'
+    hiddenInSource: false
+    hiddenInTarget: false
+    isBusinessKey: false
+    isDefaultTerm: true
+    isForeignKey: false
+    isIdentity: false
+    isNullable: true
+    dataType:
+      length: 255
+      platformDataTypeId: 'bdf6e2aa-9167-4949-9f69-735bbf516472'
+  - id: '49c3d89f-7df7-4d8b-ae96-7a3bc52198b6'
+    name: 'LAST_NAME'
+    hiddenInSource: false
+    hiddenInTarget: false
+    isBusinessKey: true
+    isForeignKey: false
+    isIdentity: false
+    isNullable: true
+    dataType:
+      length: 100
+      platformDataTypeId: '9245c3e9-05f8-4e48-962c-e1b3c49bc239'
+  - id: '5323ad16-034d-408c-9602-d8dfe5cade60'
+    name: 'FIRST_NAME'
+    hiddenInSource: false
+    hiddenInTarget: false
+    isBusinessKey: true
+    isForeignKey: false
+    isIdentity: false
+    isNullable: true
+    dataType:
+      length: 100
+      platformDataTypeId: '9245c3e9-05f8-4e48-962c-e1b3c49bc239'
+dataflows:
+  - id: 'dd105e28-5002-4ab0-bc77-b17194a8b8fe'
+    name: 'Dataflow1'
+    dataflowSets:
+      - id: 'ea3e33af-7837-49de-999e-77db02c293bc'
+        name: 'Set1'
+        dataflowModelObjects:
+          - id: '7482df12-b7e4-4c65-a469-9dccb3bde186'
+            alias: 's1'
+            sourceModelObjectId: '35fe2455-31ac-4a7e-95a4-c970f4414ada'
+        termMappings:
+          - termId: '40880139-8335-45b8-b8d6-5fa143ec9d46'
+          - termId: 'efe4d1bd-f1db-4392-9697-ee1128879d85'
+          - termId: '5c905eca-8a67-4d85-884c-9a02519ac413'
+          - expression: '7482df12-b7e4-4c65-a469-9dccb3bde186.1ad65ab3-1187-4815-b85c-a2ac4870cb32'
+            termId: '49c3d89f-7df7-4d8b-ae96-7a3bc52198b6'
+          - expression: '7482df12-b7e4-4c65-a469-9dccb3bde186.f6366d9d-9327-44fc-a953-cfa6907a53ca'
+            termId: '5323ad16-034d-408c-9602-d8dfe5cade60'
+propertyValues: []
