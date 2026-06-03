@@ -67,6 +67,18 @@ terms:
     dataType:
       length: 100
       platformDataTypeId: '9245c3e9-05f8-4e48-962c-e1b3c49bc239'
+  - id: 'e405e66a-f2c3-4bf9-9fd6-c5ba3a9ac86c'
+    name: 'Name'
+    hiddenInSource: false
+    hiddenInTarget: false
+    isBusinessKey: false
+    isForeignKey: false
+    isIdentity: false
+    isNullable: true
+    dataType:
+      length: 200
+      platformDataTypeId: 'bdf6e2aa-9167-4949-9f69-735bbf516472'
+    propertyValues: []
 dataflows:
   - id: 'fcca5a99-2ffe-4310-a57d-6e21cad65949'
     name: 'Dataflow1'
@@ -85,4 +97,5 @@ dataflows:
             termId: '41ed704d-b7fb-4fd6-82f1-b82678fccdb3'
           - expression: '9a557b81-7cfb-4c31-a873-77c3d5a011fa.f6366d9d-9327-44fc-a953-cfa6907a53ca'
             termId: '0dbff7dc-1a7e-45f5-b38e-b1a3ae03f5f3'
+          - termId: 'e405e66a-f2c3-4bf9-9fd6-c5ba3a9ac86c'
 propertyValues: []
