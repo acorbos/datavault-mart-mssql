@@ -45,17 +45,6 @@ terms:
     dataType:
       length: 255
       platformDataTypeId: 'bdf6e2aa-9167-4949-9f69-735bbf516472'
-  - id: '41ed704d-b7fb-4fd6-82f1-b82678fccdb3'
-    name: 'LAST_NAME'
-    hiddenInSource: false
-    hiddenInTarget: false
-    isBusinessKey: true
-    isForeignKey: false
-    isIdentity: false
-    isNullable: true
-    dataType:
-      length: 100
-      platformDataTypeId: '9245c3e9-05f8-4e48-962c-e1b3c49bc239'
   - id: '0dbff7dc-1a7e-45f5-b38e-b1a3ae03f5f3'
     name: 'FIRST_NAME'
     hiddenInSource: false
@@ -93,8 +82,6 @@ dataflows:
           - termId: '7a964785-6638-45e3-ad15-aeedc9249ecc'
           - termId: '6c0ab4ed-4822-4f47-b0e5-0d91cdb43bbc'
           - termId: 'e0b0aaef-8366-4dc0-937c-b2db971da7b6'
-          - expression: '9a557b81-7cfb-4c31-a873-77c3d5a011fa.1ad65ab3-1187-4815-b85c-a2ac4870cb32'
-            termId: '41ed704d-b7fb-4fd6-82f1-b82678fccdb3'
           - expression: '9a557b81-7cfb-4c31-a873-77c3d5a011fa.f6366d9d-9327-44fc-a953-cfa6907a53ca'
             termId: '0dbff7dc-1a7e-45f5-b38e-b1a3ae03f5f3'
           - expression: 'BG_CONCATENATE(s1.FirstName, s1.LastName)'
