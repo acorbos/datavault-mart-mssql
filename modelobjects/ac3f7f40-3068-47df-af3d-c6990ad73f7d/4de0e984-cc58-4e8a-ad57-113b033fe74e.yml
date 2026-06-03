@@ -99,5 +99,7 @@ dataflows:
             termId: '49c3d89f-7df7-4d8b-ae96-7a3bc52198b6'
           - expression: '7482df12-b7e4-4c65-a469-9dccb3bde186.f6366d9d-9327-44fc-a953-cfa6907a53ca'
             termId: '5323ad16-034d-408c-9602-d8dfe5cade60'
-          - termId: '6a127383-b6cc-46bf-982e-99cbec0c55ad'
+          - expression: 's.LastName + s.FirstName'
+            termId: '6a127383-b6cc-46bf-982e-99cbec0c55ad'
+            propertyValues: []
 propertyValues: []
