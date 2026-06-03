@@ -143,6 +143,7 @@ views:
       - id: '49c5b222-e8d4-4537-a2e9-2f0c17d317ca'
       - id: 'ceba80cd-1bb4-4145-a1f7-540b38e0afd0'
       - id: 'cb63a6f4-975f-4ab4-ae68-43b6e7fbcd13'
+      - id: '33348e85-6bd9-431c-b30f-c00c92587a61'
   - id: '8868e61d-37de-4c27-88a4-0c900b6bb9e3'
     name: 'Datamart'
     description: 'Datamart'
