@@ -97,7 +97,7 @@ dataflows:
             termId: '41ed704d-b7fb-4fd6-82f1-b82678fccdb3'
           - expression: '9a557b81-7cfb-4c31-a873-77c3d5a011fa.f6366d9d-9327-44fc-a953-cfa6907a53ca'
             termId: '0dbff7dc-1a7e-45f5-b38e-b1a3ae03f5f3'
-          - expression: 's1.FirstNAme + s1.LastName'
+          - expression: 'BG_CONCATENATE(s1.FirstName, s1.LastName)'
             termId: 'e405e66a-f2c3-4bf9-9fd6-c5ba3a9ac86c'
             propertyValues: []
 propertyValues: []
