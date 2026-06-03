@@ -71,7 +71,7 @@ terms:
     name: 'Name'
     hiddenInSource: false
     hiddenInTarget: false
-    isBusinessKey: false
+    isBusinessKey: true
     isForeignKey: false
     isIdentity: false
     isNullable: true
