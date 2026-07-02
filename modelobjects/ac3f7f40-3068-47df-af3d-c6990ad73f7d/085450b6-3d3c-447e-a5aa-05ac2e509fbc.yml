@@ -1,6 +1,7 @@
 id: '085450b6-3d3c-447e-a5aa-05ac2e509fbc'
 name: 'BRANCH'
 description: 'Generated Model Object from BRANCH'
+isDeactivated: true
 modelObjectTypeId: 'ac3f7f40-3068-47df-af3d-c6990ad73f7d'
 terms:
   - id: '928f780d-88f9-4687-96cc-0cc64a0ed2b8'
@@ -70,6 +71,4 @@ dataflows:
           - termId: '74e26906-fe02-4eec-b471-55001780c9e8'
           - expression: '3122c0a3-7c36-4eb2-80b6-293dd3e622e0.c808f974-f1bd-4906-88c0-8d712f378424'
             termId: '4b90df71-59d9-474f-8f7e-c509e757bb1b'
-propertyValues:
-  - propertyId: 'b0ee14c8-5179-4123-bed8-c81d60a9a0a2'
-    value: '<unselected>'
+propertyValues: []
