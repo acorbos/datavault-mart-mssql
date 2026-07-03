@@ -8,3 +8,13 @@
       modelObjectId: '7629796c-075d-4761-b308-fe6777fed038'
     - hash: '9c9afca2d01def0832957dfb44bbf123'
       modelObjectId: 'cfeb06c6-d7c4-4d31-9c31-768ae6e0faa6'
+- id: '9c58fef2-b89c-412f-965d-a6b8b38d4b60'
+  name: 'test_after_change'
+  exportedAt: '2026-07-03T09:18:15+02:00'
+  exportedModelObjects:
+    - hash: 'd863400434860911e1797abbc15f8fdd'
+      modelObjectId: '022aa3d3-bd5c-473d-a189-cb8f8ee3b5f5'
+    - hash: 'a01e7fd223ef0fab7a4794e183199fe6'
+      modelObjectId: '7b52893f-6a38-4b9b-977e-0db58fc0e1cf'
+    - hash: '9c9afca2d01def0832957dfb44bbf123'
+      modelObjectId: 'cfeb06c6-d7c4-4d31-9c31-768ae6e0faa6'
