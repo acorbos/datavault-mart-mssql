@@ -18,3 +18,13 @@
       modelObjectId: '7b52893f-6a38-4b9b-977e-0db58fc0e1cf'
     - hash: '9c9afca2d01def0832957dfb44bbf123'
       modelObjectId: 'cfeb06c6-d7c4-4d31-9c31-768ae6e0faa6'
+- id: '3c15ca99-dfc5-43e4-af10-d19b4b5c4aac'
+  name: 'emp_item_branch'
+  exportedAt: '2026-07-03T09:19:29+02:00'
+  exportedModelObjects:
+    - hash: '4e6fdf5a990a6dad85620314fe7efbdd'
+      modelObjectId: '35fe2455-31ac-4a7e-95a4-c970f4414ada'
+    - hash: '4e1a1bc53f12b59f62a8cebb2369cf7e'
+      modelObjectId: '7629796c-075d-4761-b308-fe6777fed038'
+    - hash: '9c9afca2d01def0832957dfb44bbf123'
+      modelObjectId: 'cfeb06c6-d7c4-4d31-9c31-768ae6e0faa6'
