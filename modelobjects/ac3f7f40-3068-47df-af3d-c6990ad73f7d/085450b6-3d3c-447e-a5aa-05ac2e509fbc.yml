@@ -55,6 +55,46 @@ terms:
     isNullable: true
     dataType:
       platformDataTypeId: '9d8d167b-ffbb-4498-8721-de74c859dad5'
+  - id: '0074eb67-5b46-491f-be9f-36b8e46b7910'
+    name: 'BG_DataQuality_ID'
+    description: 'Default term for the data quality row id'
+    defaultTermId: 'a36a696d-59f5-487e-a955-96c6c2f0bcad'
+    hiddenInSource: true
+    hiddenInTarget: true
+    isBusinessKey: false
+    isDefaultTerm: true
+    isForeignKey: false
+    isIdentity: true
+    isNullable: false
+    dataType:
+      platformDataTypeId: 'ad190237-5c2c-4a43-aa8c-3fda2081c1c6'
+  - id: '6fe9fa4c-00b6-4f81-a011-9c847dbb5435'
+    name: 'BG_ErrorCount'
+    description: 'Default term for the data quality error count'
+    defaultTermId: '27b8472b-1aec-4de0-9769-babc4a384c9a'
+    hiddenInSource: true
+    hiddenInTarget: true
+    isBusinessKey: false
+    isDefaultTerm: true
+    isForeignKey: false
+    isIdentity: false
+    isNullable: false
+    dataType:
+      platformDataTypeId: '9d8d167b-ffbb-4498-8721-de74c859dad5'
+  - id: '2ea3dea8-5c54-4d9a-bd88-32406e94e8ec'
+    name: 'BG_ErrorDescription'
+    description: 'Default term for the data quality error description'
+    defaultTermId: '020b2582-0e66-4db8-9c9e-561fc42a749b'
+    hiddenInSource: true
+    hiddenInTarget: true
+    isBusinessKey: false
+    isDefaultTerm: true
+    isForeignKey: false
+    isIdentity: false
+    isNullable: true
+    dataType:
+      length: 4000
+      platformDataTypeId: 'bdf6e2aa-9167-4949-9f69-735bbf516472'
 dataflows:
   - id: '9688ca47-2089-4b55-8682-9e71fcab37af'
     name: 'Dataflow1'
@@ -71,4 +111,7 @@ dataflows:
           - termId: '74e26906-fe02-4eec-b471-55001780c9e8'
           - expression: '3122c0a3-7c36-4eb2-80b6-293dd3e622e0.c808f974-f1bd-4906-88c0-8d712f378424'
             termId: '4b90df71-59d9-474f-8f7e-c509e757bb1b'
+          - termId: '0074eb67-5b46-491f-be9f-36b8e46b7910'
+          - termId: '6fe9fa4c-00b6-4f81-a011-9c847dbb5435'
+          - termId: '2ea3dea8-5c54-4d9a-bd88-32406e94e8ec'
 propertyValues: []

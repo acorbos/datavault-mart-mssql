@@ -211,3 +211,6 @@ relationships:
       - 'd9021853-a9c4-4d8e-8f08-f33e285398f3'
     relationshipTerms: []
     propertyValues: []
+propertyValues:
+  - propertyId: '9f5f2011-43d0-4509-a57c-d33ce191406a'
+    value: 'None'
