@@ -16,7 +16,7 @@ GO
 SET NOCOUNT ON;
 GO
 
--- MartDimensionTable: BRANCH_upd_Mart Dimension Table_1
+-- MartDimensionTable: BRANCH_Mart Dimension Table_1
 DECLARE @sql NVARCHAR(MAX) = N'';
 SELECT
      @sql += N'ALTER TABLE ' + QUOTENAME([ps].[name]) + N'.' + QUOTENAME([po].[name]) + N' DROP CONSTRAINT ' + QUOTENAME([c].[name]) + N';' + CHAR(13) + CHAR(10)
@@ -30,21 +30,21 @@ JOIN [sys].[objects] AS [po]
 JOIN [sys].[schemas] AS [ps]
    ON ([ps].[schema_id] = [po].[schema_id])
 WHERE ([s].[name] = N'{productlaunchevent#mart#schema_name}')
-  AND ([o].[name] = N'DM_MD_BRANCH_upd')
+  AND ([o].[name] = N'DM_MD_BRANCH')
 ;
 EXEC [sys].[sp_executesql] @sql;
 GO
-IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd]', N'U') IS NOT NULL
-    DROP TABLE [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd]
+IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH]', N'U') IS NOT NULL
+    DROP TABLE [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH]
 ;
 GO
 
-CREATE TABLE [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd] (
+CREATE TABLE [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH] (
      [BG_SourceSystem] NVARCHAR(255) NULL
     ,[BG_LoadTimestamp] DATETIMEOFFSET NOT NULL
     ,[BG_ValidFromTimestamp] DATETIMEOFFSET NOT NULL
     ,[BG_RowHash] NVARCHAR(20) NOT NULL
-    ,[BRANCH_upd_SK] INT IDENTITY NOT NULL
+    ,[BRANCH_SK] INT IDENTITY NOT NULL
     ,[BRANCH_BK] INT NOT NULL
     ,[BRANCH_NAME] VARCHAR(50) NULL
     ,[MARKET_SIZE] VARCHAR(10) NULL
@@ -52,8 +52,8 @@ CREATE TABLE [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd] (
     ,[RETAIL_SPACE_M2] INT NULL
     ,[ARTICLE_NUMBER_APPROX] INT NULL
     ,[ZIP_CODE] VARCHAR(20) NULL
-    ,CONSTRAINT [PK_DM_MD_BRANCH_upd] PRIMARY KEY CLUSTERED ([BRANCH_upd_SK])
-    ,CONSTRAINT [UC_DM_MD_BRANCH_upd] UNIQUE NONCLUSTERED ([BG_ValidFromTimestamp], [BRANCH_BK])
+    ,CONSTRAINT [PK_DM_MD_BRANCH] PRIMARY KEY CLUSTERED ([BRANCH_SK])
+    ,CONSTRAINT [UC_DM_MD_BRANCH] UNIQUE NONCLUSTERED ([BG_ValidFromTimestamp], [BRANCH_BK])
 )
 ;
 GO
@@ -62,15 +62,15 @@ SET XACT_ABORT ON;
 BEGIN TRY
     BEGIN TRANSACTION;
 
-    SET IDENTITY_INSERT [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd] ON;
+    SET IDENTITY_INSERT [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH] ON;
 
     INSERT
-    INTO [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd] WITH(TABLOCK) (
+    INTO [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH] WITH(TABLOCK) (
          [BG_SourceSystem]
         ,[BG_LoadTimestamp]
         ,[BG_ValidFromTimestamp]
         ,[BG_RowHash]
-        ,[BRANCH_upd_SK]
+        ,[BRANCH_SK]
         ,[BRANCH_BK]
         ,[BRANCH_NAME]
         ,[MARKET_SIZE]
@@ -84,7 +84,7 @@ BEGIN TRY
         ,N'19000101' AS [BG_LoadTimestamp]
         ,N'19000101' AS [BG_ValidFromTimestamp]
         ,N'0' AS [BG_RowHash]
-        ,-1 AS [BRANCH_upd_SK]
+        ,-1 AS [BRANCH_SK]
         ,0 AS [BRANCH_BK]
         ,N'Unknown' AS [BRANCH_NAME]
         ,N'Unknown' AS [MARKET_SIZE]
@@ -93,7 +93,7 @@ BEGIN TRY
         ,0 AS [ARTICLE_NUMBER_APPROX]
         ,N'Unknown' AS [ZIP_CODE]
     ;
-    SET IDENTITY_INSERT [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd] OFF;
+    SET IDENTITY_INSERT [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH] OFF;
 
     COMMIT TRANSACTION;
 END TRY
@@ -106,13 +106,13 @@ BEGIN CATCH
 END CATCH;
 GO
 
--- MartDimensionSourceView: BRANCH_upd_Mart Dimension Source View_1
-IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Source]', N'V') IS NOT NULL
-    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Source]
+-- MartDimensionSourceView: BRANCH_Mart Dimension Source View_1
+IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Source]', N'V') IS NOT NULL
+    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Source]
 ;
 GO
 
-CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Source]
+CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Source]
 AS
 SELECT
      CAST(NULL AS NVARCHAR(255)) AS [BG_SourceSystem]
@@ -131,13 +131,13 @@ JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#d
 ;
 GO
 
--- MartDimensionMultiVersionView: BRANCH_upd_Mart Dimension Multi Version View_1
-IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Versioning]', N'V') IS NOT NULL
-    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Versioning]
+-- MartDimensionMultiVersionView: BRANCH_Mart Dimension Multi Version View_1
+IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Versioning]', N'V') IS NOT NULL
+    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Versioning]
 ;
 GO
 
-CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Versioning]
+CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Versioning]
 AS
 SELECT
      [BG_Source].[BG_SourceSystem] AS [BG_SourceSystem]
@@ -149,17 +149,17 @@ SELECT
     ,[BG_Source].[ARTICLE_NUMBER_APPROX] AS [ARTICLE_NUMBER_APPROX]
     ,[BG_Source].[ZIP_CODE] AS [ZIP_CODE]
     ,[BG_Source].[BG_ValidFromTimestamp_s2] AS [BG_ValidFromTimestamp]
-FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Source] AS [BG_Source]
+FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Source] AS [BG_Source]
 ;
 GO
 
--- MartDimensionScdView: BRANCH_upd_Mart Dimension Scd View_1
-IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Scd]', N'V') IS NOT NULL
-    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Scd]
+-- MartDimensionScdView: BRANCH_Mart Dimension Scd View_1
+IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Scd]', N'V') IS NOT NULL
+    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Scd]
 ;
 GO
 
-CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Scd]
+CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Scd]
 AS
 SELECT
      [BG_SourceSystem] AS [BG_SourceSystem]
@@ -171,17 +171,17 @@ SELECT
     ,[RETAIL_SPACE_M2] AS [RETAIL_SPACE_M2]
     ,[ARTICLE_NUMBER_APPROX] AS [ARTICLE_NUMBER_APPROX]
     ,[ZIP_CODE] AS [ZIP_CODE]
-FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Versioning] AS [BG_Source]
+FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Versioning] AS [BG_Source]
 ;
 GO
 
--- MartDimensionHashingView: BRANCH_upd_Mart Dimension Hashing View_1
-IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Hashing]', N'V') IS NOT NULL
-    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Hashing]
+-- MartDimensionHashingView: BRANCH_Mart Dimension Hashing View_1
+IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Hashing]', N'V') IS NOT NULL
+    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Hashing]
 ;
 GO
 
-CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Hashing]
+CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Hashing]
 AS
 SELECT
      [BG_Source].[BG_SourceSystem] AS [BG_SourceSystem]
@@ -194,17 +194,17 @@ SELECT
     ,[BG_Source].[RETAIL_SPACE_M2] AS [RETAIL_SPACE_M2]
     ,[BG_Source].[ARTICLE_NUMBER_APPROX] AS [ARTICLE_NUMBER_APPROX]
     ,[BG_Source].[ZIP_CODE] AS [ZIP_CODE]
-FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Scd] AS [BG_Source]
+FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Scd] AS [BG_Source]
 ;
 GO
 
--- MartDimensionResultView: BRANCH_upd_Mart Dimension Result View_1
-IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Result]', N'V') IS NOT NULL
-    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Result]
+-- MartDimensionResultView: BRANCH_Mart Dimension Result View_1
+IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Result]', N'V') IS NOT NULL
+    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Result]
 ;
 GO
 
-CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Result]
+CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Result]
 AS
 SELECT
      [BG_Source].[BG_SourceSystem] AS [BG_SourceSystem]
@@ -212,7 +212,7 @@ SELECT
     ,[BG_Source].[BG_ValidFromTimestamp] AS [BG_ValidFromTimestamp]
     ,ISNULL(LEAD([BG_ValidFromTimestamp]) OVER (PARTITION BY [BRANCH_BK] ORDER BY [BG_ValidFromTimestamp]), N'99991231') AS [BG_ValidToTimestamp]
     ,[BG_Source].[BG_RowHash] AS [BG_RowHash]
-    ,[BG_Source].[BRANCH_upd_SK] AS [BRANCH_upd_SK]
+    ,[BG_Source].[BRANCH_SK] AS [BRANCH_SK]
     ,[BG_Source].[BRANCH_BK] AS [BRANCH_BK]
     ,[BG_Source].[BRANCH_NAME] AS [BRANCH_NAME]
     ,[BG_Source].[MARKET_SIZE] AS [MARKET_SIZE]
@@ -220,17 +220,17 @@ SELECT
     ,[BG_Source].[RETAIL_SPACE_M2] AS [RETAIL_SPACE_M2]
     ,[BG_Source].[ARTICLE_NUMBER_APPROX] AS [ARTICLE_NUMBER_APPROX]
     ,[BG_Source].[ZIP_CODE] AS [ZIP_CODE]
-FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd] AS [BG_Source]
+FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH] AS [BG_Source]
 ;
 GO
 
--- MartDimensionRowCondensingView: BRANCH_upd_Mart Dimension RowCondensing View_1
-IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_RowCondensing]', N'V') IS NOT NULL
-    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_RowCondensing]
+-- MartDimensionRowCondensingView: BRANCH_Mart Dimension RowCondensing View_1
+IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_RowCondensing]', N'V') IS NOT NULL
+    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_RowCondensing]
 ;
 GO
 
-CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_RowCondensing]
+CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_RowCondensing]
 AS
 SELECT
      [compare].[BG_SourceSystem] AS [BG_SourceSystem]
@@ -256,19 +256,19 @@ FROM (
         ,[BG_Source].[ARTICLE_NUMBER_APPROX] AS [ARTICLE_NUMBER_APPROX]
         ,[BG_Source].[ZIP_CODE] AS [ZIP_CODE]
         ,CASE WHEN [BG_RowHash] = LAG([BG_RowHash]) OVER (PARTITION BY [BRANCH_BK] ORDER BY [BG_ValidFromTimestamp]) THEN 1 ELSE 0 END AS [SameHash]
-    FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Hashing] AS [BG_Source]
+    FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Hashing] AS [BG_Source]
 ) AS [compare]
 WHERE [compare].[SameHash] = 0
 ;
 GO
 
--- MartDimensionDeltaView: BRANCH_upd_Mart Dimension Delta View_1
-IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Delta]', N'V') IS NOT NULL
-    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Delta]
+-- MartDimensionDeltaView: BRANCH_Mart Dimension Delta View_1
+IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Delta]', N'V') IS NOT NULL
+    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Delta]
 ;
 GO
 
-CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Delta]
+CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Delta]
 AS
 SELECT
      [BG_Source].[BG_SourceSystem] AS [BG_SourceSystem]
@@ -281,17 +281,17 @@ SELECT
     ,[BG_Source].[RETAIL_SPACE_M2] AS [RETAIL_SPACE_M2]
     ,[BG_Source].[ARTICLE_NUMBER_APPROX] AS [ARTICLE_NUMBER_APPROX]
     ,[BG_Source].[ZIP_CODE] AS [ZIP_CODE]
-FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_RowCondensing] AS [BG_Source]
-LEFT OUTER JOIN [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Result] AS [BG_Target]
+FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_RowCondensing] AS [BG_Source]
+LEFT OUTER JOIN [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Result] AS [BG_Target]
    ON ([BG_Source].[BRANCH_BK] = [BG_Target].[BRANCH_BK])
   AND ([BG_Source].[BG_ValidFromTimestamp] = [BG_Target].[BG_ValidFromTimestamp])
   AND ([BG_Source].[BG_RowHash] = [BG_Target].[BG_RowHash])
-WHERE [BG_Target].[BRANCH_upd_SK] IS NULL
+WHERE [BG_Target].[BRANCH_SK] IS NULL
 ;
 GO
 
--- MartDimensionLoader: BRANCH_upd_Mart Dimension Loader_1
-CREATE OR ALTER PROCEDURE [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Loader]
+-- MartDimensionLoader: BRANCH_Mart Dimension Loader_1
+CREATE OR ALTER PROCEDURE [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Loader]
 (
      @LoadTimestamp DATETIMEOFFSET
     ,@LoadEffectiveTimestamp DATETIMEOFFSET
@@ -324,14 +324,14 @@ BEGIN
              [BG_SourceSystem] = [BG_Source].[BG_SourceSystem]
             ,[BG_LoadTimestamp] = [BG_Source].[BG_LoadTimestamp]
             ,[BG_RowHash] = [BG_Source].[BG_RowHash]
-        FROM [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd] AS [BG_Target]
+        FROM [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH] AS [BG_Target]
         JOIN (
             SELECT
                  [BG_Source].[BG_SourceSystem] AS [BG_SourceSystem]
                 ,@LoadTimestamp AS [BG_LoadTimestamp]
                 ,[BG_Source].[BG_ValidFromTimestamp] AS [BG_ValidFromTimestamp]
                 ,[BG_Source].[BG_RowHash] AS [BG_RowHash]
-                ,CAST(NULL AS INT) AS [BRANCH_upd_SK]
+                ,CAST(NULL AS INT) AS [BRANCH_SK]
                 ,[BG_Source].[BRANCH_BK] AS [BRANCH_BK]
                 ,[BG_Source].[BRANCH_NAME] AS [BRANCH_NAME]
                 ,[BG_Source].[MARKET_SIZE] AS [MARKET_SIZE]
@@ -339,13 +339,13 @@ BEGIN
                 ,[BG_Source].[RETAIL_SPACE_M2] AS [RETAIL_SPACE_M2]
                 ,[BG_Source].[ARTICLE_NUMBER_APPROX] AS [ARTICLE_NUMBER_APPROX]
                 ,[BG_Source].[ZIP_CODE] AS [ZIP_CODE]
-            FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Delta] AS [BG_Source]
+            FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Delta] AS [BG_Source]
         ) AS [BG_Source]
            ON ([BG_Source].[BRANCH_BK] = [BG_Target].[BRANCH_BK])
           AND ([BG_Source].[BG_ValidFromTimestamp] = [BG_Target].[BG_ValidFromTimestamp])
         ;
         INSERT
-        INTO [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd] WITH(TABLOCK) (
+        INTO [{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH] WITH(TABLOCK) (
              [BG_SourceSystem]
             ,[BG_LoadTimestamp]
             ,[BG_ValidFromTimestamp]
@@ -370,7 +370,7 @@ BEGIN
             ,[BG_Source].[RETAIL_SPACE_M2] AS [RETAIL_SPACE_M2]
             ,[BG_Source].[ARTICLE_NUMBER_APPROX] AS [ARTICLE_NUMBER_APPROX]
             ,[BG_Source].[ZIP_CODE] AS [ZIP_CODE]
-        FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Delta] AS [BG_Source]
+        FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Delta] AS [BG_Source]
         ;
 
         SET @RowCountInserted = (@RowCountInserted + ROWCOUNT_BIG());
@@ -1777,7 +1777,7 @@ GO
 CREATE TABLE [{productlaunchevent#mart#schema_name}].[DM_MF_Sales] (
      [BG_LoadTimestamp] DATETIMEOFFSET NOT NULL
     ,[BG_SourceSystem] NVARCHAR(255) NULL
-    ,[BRANCH_upd_BRANCH_SK] INT NOT NULL
+    ,[BRANCH_BRANCH_SK] INT NOT NULL
     ,[Customer_History_Customer_History_SK] INT NOT NULL
     ,[ITEMUNITOFMEASURE_ITEMUNITOFMEASURE_SK] INT NOT NULL
     ,[ITEM_ITEM_SK] INT NOT NULL
@@ -1788,7 +1788,7 @@ CREATE TABLE [{productlaunchevent#mart#schema_name}].[DM_MF_Sales] (
 )
 ;
 GO
-CREATE NONCLUSTERED INDEX [IX_DM_MF_Sales_BRANCH] ON [{productlaunchevent#mart#schema_name}].[DM_MF_Sales] ([BRANCH_upd_BRANCH_SK]);
+CREATE NONCLUSTERED INDEX [IX_DM_MF_Sales_BRANCH] ON [{productlaunchevent#mart#schema_name}].[DM_MF_Sales] ([BRANCH_BRANCH_SK]);
 CREATE NONCLUSTERED INDEX [IX_DM_MF_Sales_Customer_History] ON [{productlaunchevent#mart#schema_name}].[DM_MF_Sales] ([Customer_History_Customer_History_SK]);
 CREATE NONCLUSTERED INDEX [IX_DM_MF_Sales_ITEMUNITOFMEASURE] ON [{productlaunchevent#mart#schema_name}].[DM_MF_Sales] ([ITEMUNITOFMEASURE_ITEMUNITOFMEASURE_SK]);
 CREATE NONCLUSTERED INDEX [IX_DM_MF_Sales_ITEM] ON [{productlaunchevent#mart#schema_name}].[DM_MF_Sales] ([ITEM_ITEM_SK]);
@@ -1902,7 +1902,7 @@ SELECT
     ,[s2].[BG_LoadTimestamp] AS [BG_EffectiveTimestamp]
     ,N'Dataflow1' AS [BG_DataflowName]
     ,[s2].[BG_LoadTimestamp] AS [BG_IncrementalFilter]
-    ,[s1].[FK_BRANCH_BRANCH_ID] AS [FK_BRANCH_upd_BRANCH_BRANCH_BK]
+    ,[s1].[FK_BRANCH_BRANCH_ID] AS [FK_BRANCH_BRANCH_BK]
     ,[s1].[FK_CUSTOMER_CUSTOMER_ID] AS [FK_Customer_History_CUSTOMER_ID]
     ,[s1].[FK_ITEMUNITOFMEASURE_ITEM_ID] AS [FK_ITEMUNITOFMEASURE_ITEM_ID]
     ,[s1].[FK_ITEMUNITOFMEASURE_UOM] AS [FK_ITEMUNITOFMEASURE_UOM]
@@ -1953,7 +1953,7 @@ AS
 SELECT
      [BG_Source].[BG_LoadTimestamp] AS [BG_LoadTimestamp]
     ,[BG_Source].[BG_SourceSystem] AS [BG_SourceSystem]
-    ,[BG_Source].[BRANCH_upd_BRANCH_SK] AS [BRANCH_upd_BRANCH_SK]
+    ,[BG_Source].[BRANCH_BRANCH_SK] AS [BRANCH_BRANCH_SK]
     ,[BG_Source].[Customer_History_Customer_History_SK] AS [Customer_History_Customer_History_SK]
     ,[BG_Source].[ITEMUNITOFMEASURE_ITEMUNITOFMEASURE_SK] AS [ITEMUNITOFMEASURE_ITEMUNITOFMEASURE_SK]
     ,[BG_Source].[ITEM_ITEM_SK] AS [ITEM_ITEM_SK]
@@ -1980,13 +1980,13 @@ SELECT
     ,[BG_Source].[REDUCTION] AS [REDUCTION]
     ,[BG_Source].[QUANTITY] AS [QUANTITY]
     ,[BG_Source].[SALES_AMOUNT] AS [SALES_AMOUNT]
-    ,ISNULL([r1].[BRANCH_upd_SK], -1) AS [BRANCH_upd_BRANCH_SK]
+    ,ISNULL([r1].[BRANCH_SK], -1) AS [BRANCH_BRANCH_SK]
     ,ISNULL([r2].[Customer_History_SK], -1) AS [Customer_History_Customer_History_SK]
     ,ISNULL([r3].[ITEMUNITOFMEASURE_SK], -1) AS [ITEMUNITOFMEASURE_ITEMUNITOFMEASURE_SK]
     ,ISNULL([r4].[ITEM_SK], -1) AS [ITEM_ITEM_SK]
 FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Source] AS [BG_Source]
-LEFT OUTER JOIN [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_upd_Result] AS [r1]
-   ON ([r1].[BRANCH_BK] = [BG_Source].[FK_BRANCH_upd_BRANCH_BRANCH_BK])
+LEFT OUTER JOIN [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Result] AS [r1]
+   ON ([r1].[BRANCH_BK] = [BG_Source].[FK_BRANCH_BRANCH_BK])
   AND ([BG_Source].[BG_EffectiveTimestamp] >= [r1].[BG_ValidFromTimestamp])
   AND ([BG_Source].[BG_EffectiveTimestamp] < [r1].[BG_ValidToTimestamp])
 LEFT OUTER JOIN [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_Customer_History_Result] AS [r2]
@@ -2064,7 +2064,7 @@ BEGIN
             INTO [{productlaunchevent#mart#schema_name}].[DM_MF_Sales] WITH(TABLOCK) (
                  [BG_LoadTimestamp]
                 ,[BG_SourceSystem]
-                ,[BRANCH_upd_BRANCH_SK]
+                ,[BRANCH_BRANCH_SK]
                 ,[Customer_History_Customer_History_SK]
                 ,[ITEMUNITOFMEASURE_ITEMUNITOFMEASURE_SK]
                 ,[ITEM_ITEM_SK]
@@ -2076,7 +2076,7 @@ BEGIN
             SELECT
                  @LoadTimestamp AS [BG_LoadTimestamp]
                 ,[BG_Source].[BG_SourceSystem] AS [BG_SourceSystem]
-                ,[BG_Source].[BRANCH_upd_BRANCH_SK] AS [BRANCH_upd_BRANCH_SK]
+                ,[BG_Source].[BRANCH_BRANCH_SK] AS [BRANCH_BRANCH_SK]
                 ,[BG_Source].[Customer_History_Customer_History_SK] AS [Customer_History_Customer_History_SK]
                 ,[BG_Source].[ITEMUNITOFMEASURE_ITEMUNITOFMEASURE_SK] AS [ITEMUNITOFMEASURE_ITEMUNITOFMEASURE_SK]
                 ,[BG_Source].[ITEM_ITEM_SK] AS [ITEM_ITEM_SK]
