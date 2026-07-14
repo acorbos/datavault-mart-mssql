@@ -14,7 +14,7 @@ For more information about **biGENIUS**, please visit https://www.bigenius-x.com
 ## Generator
 
 - **Name**: biGENIUS.Implementation.Generator.VaultAndMart.Mssql
-- **Version**: 2.0.1
+- **Version**: 2.1.0-beta001untested
 
 ## Project
 
@@ -24,7 +24,7 @@ For more information about **biGENIUS**, please visit https://www.bigenius-x.com
 
 ## Build
 
-- **Time**: 2026-07-14 10:26:41 UTC
+- **Time**: 2026-07-14 10:52:46 UTC
 - **User**: Anca Corbos
 
 ## Output

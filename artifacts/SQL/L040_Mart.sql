@@ -1768,13 +1768,13 @@ BEGIN
 END;
 GO
 
--- MartFactTable: Sales_upd_Mart Fact Table_1
-IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd]', N'U') IS NOT NULL
-    DROP TABLE [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd]
+-- MartFactTable: Sales_Mart Fact Table_1
+IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MF_Sales]', N'U') IS NOT NULL
+    DROP TABLE [{productlaunchevent#mart#schema_name}].[DM_MF_Sales]
 ;
 GO
 
-CREATE TABLE [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd] (
+CREATE TABLE [{productlaunchevent#mart#schema_name}].[DM_MF_Sales] (
      [BG_LoadTimestamp] DATETIMEOFFSET NOT NULL
     ,[BG_SourceSystem] NVARCHAR(255) NULL
     ,[BRANCH_BRANCH_SK] INT NOT NULL
@@ -1788,25 +1788,25 @@ CREATE TABLE [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd] (
 )
 ;
 GO
-CREATE NONCLUSTERED INDEX [IX_DM_MF_Sales_upd_BRANCH] ON [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd] ([BRANCH_BRANCH_SK]);
-CREATE NONCLUSTERED INDEX [IX_DM_MF_Sales_upd_Customer_History] ON [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd] ([Customer_History_Customer_History_SK]);
-CREATE NONCLUSTERED INDEX [IX_DM_MF_Sales_upd_ITEMUNITOFMEASURE] ON [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd] ([ITEMUNITOFMEASURE_ITEMUNITOFMEASURE_SK]);
-CREATE NONCLUSTERED INDEX [IX_DM_MF_Sales_upd_ITEM] ON [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd] ([ITEM_ITEM_SK]);
+CREATE NONCLUSTERED INDEX [IX_DM_MF_Sales_BRANCH] ON [{productlaunchevent#mart#schema_name}].[DM_MF_Sales] ([BRANCH_BRANCH_SK]);
+CREATE NONCLUSTERED INDEX [IX_DM_MF_Sales_Customer_History] ON [{productlaunchevent#mart#schema_name}].[DM_MF_Sales] ([Customer_History_Customer_History_SK]);
+CREATE NONCLUSTERED INDEX [IX_DM_MF_Sales_ITEMUNITOFMEASURE] ON [{productlaunchevent#mart#schema_name}].[DM_MF_Sales] ([ITEMUNITOFMEASURE_ITEMUNITOFMEASURE_SK]);
+CREATE NONCLUSTERED INDEX [IX_DM_MF_Sales_ITEM] ON [{productlaunchevent#mart#schema_name}].[DM_MF_Sales] ([ITEM_ITEM_SK]);
 GO
 
--- MartFactIncrementTable: Sales_upd_Mart Fact Increment Table_1
-IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Increment]', N'U') IS NOT NULL
-    DROP TABLE [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Increment]
+-- MartFactIncrementTable: Sales_Mart Fact Increment Table_1
+IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Increment]', N'U') IS NOT NULL
+    DROP TABLE [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Increment]
 ;
 GO
 
-CREATE TABLE [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Increment] (
+CREATE TABLE [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Increment] (
      [BG_LoadTimestamp] DATETIMEOFFSET NOT NULL
     ,[BG_DataflowName] NVARCHAR(255) NULL
     ,[BG_ID] INT IDENTITY NOT NULL
     ,[BG_IncrementalFilter] DATETIMEOFFSET NULL
     ,[BG_DataflowSetName] NVARCHAR(255) NULL
-    ,CONSTRAINT [PK_DM_MF_Sales_upd_Increment] PRIMARY KEY CLUSTERED ([BG_ID])
+    ,CONSTRAINT [PK_DM_MF_Sales_Increment] PRIMARY KEY CLUSTERED ([BG_ID])
 )
 ;
 GO
@@ -1816,7 +1816,7 @@ BEGIN TRY
     BEGIN TRANSACTION;
 
     INSERT
-    INTO [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Increment] WITH(TABLOCK) (
+    INTO [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Increment] WITH(TABLOCK) (
          [BG_LoadTimestamp]
         ,[BG_DataflowName]
         ,[BG_IncrementalFilter]
@@ -1830,7 +1830,7 @@ BEGIN TRY
     WHERE NOT EXISTS (
               SELECT
                    1
-              FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Increment]
+              FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Increment]
               WHERE ([BG_DataflowName] = N'Dataflow1')
                 AND ([BG_DataflowSetName] = N'Set1')
           )
@@ -1847,13 +1847,13 @@ BEGIN CATCH
 END CATCH;
 GO
 
--- MartFactIncrementSourceView: Sales_upd_Mart Fact Increment Source View_1
-IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_IncrementSource]', N'V') IS NOT NULL
-    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_IncrementSource]
+-- MartFactIncrementSourceView: Sales_Mart Fact Increment Source View_1
+IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_IncrementSource]', N'V') IS NOT NULL
+    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_IncrementSource]
 ;
 GO
 
-CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_IncrementSource]
+CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_IncrementSource]
 AS
 SELECT
      [sourcequery].[BG_DataflowName]
@@ -1870,11 +1870,11 @@ FROM (
     JOIN (
         SELECT
              [BG_IncrementalFilter] AS [BG_IncrementalFilter]
-        FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Increment]
+        FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Increment]
         WHERE [BG_ID] = (
                   SELECT
                        MAX([BG_ID])
-                  FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Increment]
+                  FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Increment]
                   WHERE ([BG_DataflowName] = N'Dataflow1')
                     AND ([BG_DataflowSetName] = N'Set1')
               )
@@ -1889,13 +1889,13 @@ GROUP BY
 ;
 GO
 
--- MartFactSourceView: Sales_upd_Mart Fact Source View_1
-IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Source]', N'V') IS NOT NULL
-    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Source]
+-- MartFactSourceView: Sales_Mart Fact Source View_1
+IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Source]', N'V') IS NOT NULL
+    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Source]
 ;
 GO
 
-CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Source]
+CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Source]
 AS
 SELECT
      CAST(NULL AS NVARCHAR(255)) AS [BG_SourceSystem]
@@ -1927,7 +1927,7 @@ JOIN (
             SELECT
                  [BG_IncrementalFilter]
                 ,ROW_NUMBER() OVER ( ORDER BY [BG_ID] DESC) AS [BG_id_rank]
-            FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Increment]
+            FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Increment]
             WHERE ([BG_DataflowName] = N'Dataflow1')
               AND ([BG_DataflowSetName] = N'Set1')
         ) AS [BG_all_inc]
@@ -1942,13 +1942,13 @@ WHERE (([s2].[BG_LoadTimestamp] > [BG_inc].[BG_IncrementLow])
 ;
 GO
 
--- MartFactResultView: Sales_upd_Mart Fact Result View_1
-IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Result]', N'V') IS NOT NULL
-    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Result]
+-- MartFactResultView: Sales_Mart Fact Result View_1
+IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Result]', N'V') IS NOT NULL
+    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Result]
 ;
 GO
 
-CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Result]
+CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Result]
 AS
 SELECT
      [BG_Source].[BG_LoadTimestamp] AS [BG_LoadTimestamp]
@@ -1961,17 +1961,17 @@ SELECT
     ,[BG_Source].[REDUCTION] AS [REDUCTION]
     ,[BG_Source].[QUANTITY] AS [QUANTITY]
     ,[BG_Source].[SALES_AMOUNT] AS [SALES_AMOUNT]
-FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd] AS [BG_Source]
+FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MF_Sales] AS [BG_Source]
 ;
 GO
 
--- MartFactLookupView: Sales_upd_Mart Fact Lookup View_1
-IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Lkp]', N'V') IS NOT NULL
-    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Lkp]
+-- MartFactLookupView: Sales_Mart Fact Lookup View_1
+IF OBJECT_ID(N'[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Lkp]', N'V') IS NOT NULL
+    DROP VIEW [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Lkp]
 ;
 GO
 
-CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Lkp]
+CREATE VIEW [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Lkp]
 AS
 SELECT
      [BG_Source].[BG_SourceSystem] AS [BG_SourceSystem]
@@ -1984,7 +1984,7 @@ SELECT
     ,ISNULL([r2].[Customer_History_SK], -1) AS [Customer_History_Customer_History_SK]
     ,ISNULL([r3].[ITEMUNITOFMEASURE_SK], -1) AS [ITEMUNITOFMEASURE_ITEMUNITOFMEASURE_SK]
     ,ISNULL([r4].[ITEM_SK], -1) AS [ITEM_ITEM_SK]
-FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Source] AS [BG_Source]
+FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Source] AS [BG_Source]
 LEFT OUTER JOIN [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MD_BRANCH_Result] AS [r1]
    ON ([r1].[BRANCH_BK] = [BG_Source].[FK_BRANCH_BRANCH_BK])
   AND ([BG_Source].[BG_EffectiveTimestamp] >= [r1].[BG_ValidFromTimestamp])
@@ -2005,8 +2005,8 @@ LEFT OUTER JOIN [{productlaunchevent#mart#server_name}].[{productlaunchevent#mar
 ;
 GO
 
--- MartFactTruncateInsertLoader: Sales_upd_Mart Fact TruncateInsertLoader_1
-CREATE OR ALTER PROCEDURE [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_TruncateInsertLoader]
+-- MartFactTruncateInsertLoader: Sales_Mart Fact TruncateInsertLoader_1
+CREATE OR ALTER PROCEDURE [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_TruncateInsertLoader]
 (
      @LoadTimestamp DATETIMEOFFSET
     ,@LoadEffectiveTimestamp DATETIMEOFFSET
@@ -2037,7 +2037,7 @@ BEGIN
         BEGIN TRANSACTION;
 
         INSERT
-        INTO [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Increment] WITH(TABLOCK) (
+        INTO [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Increment] WITH(TABLOCK) (
              [BG_LoadTimestamp]
             ,[BG_DataflowName]
             ,[BG_IncrementalFilter]
@@ -2048,7 +2048,7 @@ BEGIN
             ,[BG_DataflowName]
             ,MAX([BG_IncrementalFilter])
             ,[BG_DataflowSetName]
-        FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_IncrementSource] AS [BG_IncrementSource]
+        FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_IncrementSource] AS [BG_IncrementSource]
         WHERE [BG_DataflowName] = N'Dataflow1'
         GROUP BY
              [BG_DataflowName]
@@ -2059,23 +2059,9 @@ BEGIN
 
         IF @IncrementRowsInserted > 0
         BEGIN
-            TRUNCATE TABLE [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd];
-
-            COMMIT TRANSACTION;
-        END TRY
-        BEGIN CATCH
-            IF XACT_STATE() <> 0
-            BEGIN
-                ROLLBACK TRANSACTION;
-            END;
-            THROW;
-        END CATCH;
-
-        BEGIN TRY
-            BEGIN TRANSACTION;
-
+            TRUNCATE TABLE [{productlaunchevent#mart#schema_name}].[DM_MF_Sales];
             INSERT
-            INTO [{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd] WITH(TABLOCK) (
+            INTO [{productlaunchevent#mart#schema_name}].[DM_MF_Sales] WITH(TABLOCK) (
                  [BG_LoadTimestamp]
                 ,[BG_SourceSystem]
                 ,[BRANCH_BRANCH_SK]
@@ -2098,7 +2084,7 @@ BEGIN
                 ,[BG_Source].[REDUCTION] AS [REDUCTION]
                 ,[BG_Source].[QUANTITY] AS [QUANTITY]
                 ,[BG_Source].[SALES_AMOUNT] AS [SALES_AMOUNT]
-            FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_upd_Lkp] AS [BG_Source]
+            FROM [{productlaunchevent#mart#server_name}].[{productlaunchevent#mart#database_name}].[{productlaunchevent#mart#schema_name}].[DM_MF_Sales_Lkp] AS [BG_Source]
             ;
 
             SET @RowCountInserted = (@RowCountInserted + ROWCOUNT_BIG());
