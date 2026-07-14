@@ -1,6 +1,7 @@
 id: 'cb63a6f4-975f-4ab4-ae68-43b6e7fbcd13'
-name: 'Sales'
+name: 'Sales_upd'
 description: 'Generated Model Object from Sales'
+isDeactivated: false
 modelObjectTypeId: 'f0fbefdb-99d0-452b-b4f1-029884bfc482'
 terms:
   - id: '11d9ee74-3647-4eb9-9366-c68bc7349354'
@@ -96,7 +97,7 @@ terms:
     dataType:
       platformDataTypeId: '9d8d167b-ffbb-4498-8721-de74c859dad5'
   - id: '49484b53-d839-4028-9f78-a4d9e71b62f4'
-    name: 'ITEM_BRANCH_SK'
+    name: 'BRANCH_BRANCH_SK'
     description: 'Default term with the identity of the referenced mart dimension'
     defaultTermId: '618f7171-3c96-4093-9f01-05b68d3ee3f1'
     hiddenInSource: false
@@ -122,7 +123,7 @@ terms:
       platformDataTypeId: 'ea625964-ee65-4825-8d1b-87ebbd7baa31'
       precision: 38
   - id: 'fc4fbe0c-08c6-43ef-9289-56f9e5c36fec'
-    name: 'ITEM_Customer_History_SK'
+    name: 'Customer_History_Customer_History_SK'
     description: 'Default term with the identity of the referenced mart dimension'
     defaultTermId: '618f7171-3c96-4093-9f01-05b68d3ee3f1'
     hiddenInSource: false
@@ -160,7 +161,7 @@ terms:
       length: 10
       platformDataTypeId: '9245c3e9-05f8-4e48-962c-e1b3c49bc239'
   - id: '27de1261-9122-42ea-97a6-dbefa4d0632b'
-    name: 'ITEM_ITEMUNITOFMEASURE_SK'
+    name: 'ITEMUNITOFMEASURE_ITEMUNITOFMEASURE_SK'
     description: 'Default term with the identity of the referenced mart dimension'
     defaultTermId: '618f7171-3c96-4093-9f01-05b68d3ee3f1'
     hiddenInSource: false
