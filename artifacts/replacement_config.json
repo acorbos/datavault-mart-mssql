@@ -1,0 +1,110 @@
+{
+	"environments": [
+		{
+			"name": "DEV",
+			"projects": [
+				{
+					"name": "Product Launch Event",
+					"variables": [
+						{
+							"name": "productlaunchevent#businessvault#server_name",
+							"value": "",
+							"secretname": ""
+						},
+						{
+							"name": "productlaunchevent#businessvault#database_name",
+							"value": "",
+							"secretname": ""
+						},
+						{
+							"name": "productlaunchevent#businessvault#schema_name",
+							"value": "",
+							"secretname": ""
+						},
+						{
+							"name": "productlaunchevent#mart#server_name",
+							"value": "",
+							"secretname": ""
+						},
+						{
+							"name": "productlaunchevent#mart#database_name",
+							"value": "",
+							"secretname": ""
+						},
+						{
+							"name": "productlaunchevent#mart#schema_name",
+							"value": "",
+							"secretname": ""
+						},
+						{
+							"name": "productlaunchevent#rawvault#server_name",
+							"value": "",
+							"secretname": ""
+						},
+						{
+							"name": "productlaunchevent#rawvault#database_name",
+							"value": "",
+							"secretname": ""
+						},
+						{
+							"name": "productlaunchevent#rawvault#schema_name",
+							"value": "",
+							"secretname": ""
+						},
+						{
+							"name": "productlaunchevent#stage#server_name",
+							"value": "",
+							"secretname": ""
+						},
+						{
+							"name": "productlaunchevent#stage#database_name",
+							"value": "",
+							"secretname": ""
+						},
+						{
+							"name": "productlaunchevent#stage#schema_name",
+							"value": "",
+							"secretname": ""
+						},
+						{
+							"name": "productlaunchevent#blackforestmarkets#server_name",
+							"value": "",
+							"secretname": ""
+						},
+						{
+							"name": "productlaunchevent#blackforestmarkets#database_name",
+							"value": "",
+							"secretname": ""
+						},
+						{
+							"name": "productlaunchevent#blackforestmarkets#schema_name",
+							"value": "",
+							"secretname": ""
+						}
+					]
+				},
+				{
+					"name": "loadcontrol",
+					"variables": [
+						{
+							"name": "loadcontrol#loadcontrol#server_name",
+							"value": "",
+							"secretname": ""
+						},
+						{
+							"name": "loadcontrol#loadcontrol#database_name",
+							"value": "",
+							"secretname": ""
+						},
+						{
+							"name": "loadcontrol#loadcontrol#schema_name",
+							"value": "LC",
+							"secretname": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"secretprovider": {}
+}
