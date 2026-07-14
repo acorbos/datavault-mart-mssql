@@ -1,1 +1,6 @@
 DefaultTerms: []
+PropertyMappings:
+  - InternalCode: 'c3cbefe2-ba36-4641-a223-c699da416a8f'
+    Name: 'LinkNulledBusinessKeyBehaviour - Project'
+    EntityTypeId: '012e1a4a-79e5-4d97-85c5-6747a0a34c42'
+    PropertyId: '2b41de3f-a477-4ff9-ba4f-e4b3119f6351'
