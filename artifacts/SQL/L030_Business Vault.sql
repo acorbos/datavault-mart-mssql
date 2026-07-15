@@ -49,9 +49,9 @@ AS
 SELECT
      [loadSet].[BG_ValidFromTimestamp] AS [BG_ValidFromTimestamp]
     ,[loadSet].[PIT_HK] AS [PIT_HK]
-    ,ISNULL(MAX([s1].[Hub_HK]), 0) AS [CUSTOMER_Info_CUSTOMER_Info_HK]
+    ,ISNULL(MAX([s1].[Hub_HK]), 0x00) AS [CUSTOMER_Info_CUSTOMER_Info_HK]
     ,ISNULL(MAX([s1].[BG_ValidFromTimestamp]), N'19000101') AS [CUSTOMER_Info_BG_ValidFromTimestamp]
-    ,ISNULL(MAX([s2].[Hub_HK]), 0) AS [CUSTOMER_Address_CUSTOMER_Address_HK]
+    ,ISNULL(MAX([s2].[Hub_HK]), 0x00) AS [CUSTOMER_Address_CUSTOMER_Address_HK]
     ,ISNULL(MAX([s2].[BG_ValidFromTimestamp]), N'19000101') AS [CUSTOMER_Address_BG_ValidFromTimestamp]
 FROM (
     SELECT
@@ -94,7 +94,7 @@ SELECT
     ,[CUSTOMER_Address_CUSTOMER_Address_HK] AS [CUSTOMER_Address_CUSTOMER_Address_HK]
     ,[CUSTOMER_Address_BG_ValidFromTimestamp] AS [CUSTOMER_Address_BG_ValidFromTimestamp]
 FROM [{productlaunchevent#businessvault#server_name}].[{productlaunchevent#businessvault#database_name}].[{productlaunchevent#businessvault#schema_name}].[BDV_PIT_CUSTOMER_PIT]
-WHERE [PIT_HK] <> 0
+WHERE [PIT_HK] <> 0x00
 ;
 GO
 
@@ -368,26 +368,26 @@ BEGIN TRY
     )
     SELECT
          N'Unknown' AS [BG_SourceSystem]
-        ,0 AS [Link_HK]
+        ,0x00 AS [Link_HK]
         ,N'19000101' AS [BG_LoadTimestamp]
         ,0 AS [FK_BRANCH_BRANCH_ID]
-        ,0 AS [BRANCH_BRANCH_HK]
+        ,0x00 AS [BRANCH_BRANCH_HK]
         ,0 AS [FK_CUSTOMER_CUSTOMER_ID]
-        ,0 AS [CUSTOMER_CUSTOMER_HK]
+        ,0x00 AS [CUSTOMER_CUSTOMER_HK]
         ,0 AS [FK_LOYALTYCARD_LOYALTYCARD_ID]
-        ,0 AS [LOYALTYCARD_LOYALTYCARD_HK]
+        ,0x00 AS [LOYALTYCARD_LOYALTYCARD_HK]
         ,0 AS [FK_ITEMUNITOFMEASURE_ITEM_ID]
         ,N'Unknown' AS [FK_ITEMUNITOFMEASURE_UOM]
-        ,0 AS [ITEMUNITOFMEASURE_ITEMUNITOFMEASURE_HK]
+        ,0x00 AS [ITEMUNITOFMEASURE_ITEMUNITOFMEASURE_HK]
         ,0 AS [FK_POS_POS_ID]
-        ,0 AS [POS_POS_HK]
+        ,0x00 AS [POS_POS_HK]
         ,0 AS [FK_ITEM_ITEM_ID]
-        ,0 AS [ITEM_ITEM_HK]
+        ,0x00 AS [ITEM_ITEM_HK]
         ,0 AS [FK_SALESTRANSACTION_TRANSACTION_ID]
         ,0 AS [FK_SALESTRANSACTION_TRANSACTION_LINE_NO]
         ,N'19000101' AS [FK_SALESTRANSACTION_TRANSACTION_TIME]
         ,0 AS [FK_SALESTRANSACTION_POS_ID]
-        ,0 AS [SALESTRANSACTION_SALESTRANSACTION_HK]
+        ,0x00 AS [SALESTRANSACTION_SALESTRANSACTION_HK]
     ;
 
     COMMIT TRANSACTION;
@@ -465,7 +465,7 @@ SELECT
     ,[FK_SALESTRANSACTION_POS_ID] AS [FK_SALESTRANSACTION_POS_ID]
     ,[SALESTRANSACTION_SALESTRANSACTION_HK] AS [SALESTRANSACTION_SALESTRANSACTION_HK]
 FROM [{productlaunchevent#businessvault#server_name}].[{productlaunchevent#businessvault#database_name}].[{productlaunchevent#businessvault#schema_name}].[BDV_LNK_Sales]
-WHERE [Link_HK] <> 0
+WHERE [Link_HK] <> 0x00
 ;
 GO
 
@@ -499,7 +499,7 @@ SELECT
     ,[BG_Source].[FK_SALESTRANSACTION_POS_ID] AS [FK_SALESTRANSACTION_POS_ID]
     ,[BG_Source].[SALESTRANSACTION_SALESTRANSACTION_HK] AS [SALESTRANSACTION_SALESTRANSACTION_HK]
 FROM [{productlaunchevent#businessvault#server_name}].[{productlaunchevent#businessvault#database_name}].[{productlaunchevent#businessvault#schema_name}].[BDV_LNK_Sales_Hashing] AS [BG_Source]
-LEFT OUTER JOIN [{productlaunchevent#businessvault#server_name}].[{productlaunchevent#businessvault#database_name}].[{productlaunchevent#businessvault#schema_name}].[BDV_LNK_Sales] AS [BG_Target]
+LEFT OUTER JOIN [{productlaunchevent#businessvault#server_name}].[{productlaunchevent#businessvault#database_name}].[{productlaunchevent#businessvault#schema_name}].[BDV_LNK_Sales_Result] AS [BG_Target]
    ON [BG_Source].[Link_HK] = [BG_Target].[Link_HK]
 WHERE [BG_Target].[Link_HK] IS NULL
 ;

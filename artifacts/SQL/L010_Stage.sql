@@ -125,6 +125,20 @@ BEGIN
         BEGIN TRANSACTION;
 
         TRUNCATE TABLE [{productlaunchevent#stage#schema_name}].[STG_ST_BRANCH];
+
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        IF XACT_STATE() <> 0
+        BEGIN
+            ROLLBACK TRANSACTION;
+        END;
+        THROW;
+    END CATCH;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
         INSERT
         INTO [{productlaunchevent#stage#schema_name}].[STG_ST_BRANCH] WITH(TABLOCK) (
              [BG_LoadTimestamp]
@@ -278,6 +292,20 @@ BEGIN
         BEGIN TRANSACTION;
 
         TRUNCATE TABLE [{productlaunchevent#stage#schema_name}].[STG_ST_CUSTOMER];
+
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        IF XACT_STATE() <> 0
+        BEGIN
+            ROLLBACK TRANSACTION;
+        END;
+        THROW;
+    END CATCH;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
         INSERT
         INTO [{productlaunchevent#stage#schema_name}].[STG_ST_CUSTOMER] WITH(TABLOCK) (
              [BG_LoadTimestamp]
@@ -403,6 +431,20 @@ BEGIN
         BEGIN TRANSACTION;
 
         TRUNCATE TABLE [{productlaunchevent#stage#schema_name}].[STG_ST_CUSTOMER_DUPLICATES];
+
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        IF XACT_STATE() <> 0
+        BEGIN
+            ROLLBACK TRANSACTION;
+        END;
+        THROW;
+    END CATCH;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
         INSERT
         INTO [{productlaunchevent#stage#schema_name}].[STG_ST_CUSTOMER_DUPLICATES] WITH(TABLOCK) (
              [BG_LoadTimestamp]
@@ -566,6 +608,20 @@ BEGIN
         BEGIN TRANSACTION;
 
         TRUNCATE TABLE [{productlaunchevent#stage#schema_name}].[STG_ST_EMPLOYEE];
+
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        IF XACT_STATE() <> 0
+        BEGIN
+            ROLLBACK TRANSACTION;
+        END;
+        THROW;
+    END CATCH;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
         INSERT
         INTO [{productlaunchevent#stage#schema_name}].[STG_ST_EMPLOYEE] WITH(TABLOCK) (
              [BG_LoadTimestamp]
@@ -720,6 +776,20 @@ BEGIN
         BEGIN TRANSACTION;
 
         TRUNCATE TABLE [{productlaunchevent#stage#schema_name}].[STG_ST_ITEM];
+
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        IF XACT_STATE() <> 0
+        BEGIN
+            ROLLBACK TRANSACTION;
+        END;
+        THROW;
+    END CATCH;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
         INSERT
         INTO [{productlaunchevent#stage#schema_name}].[STG_ST_ITEM] WITH(TABLOCK) (
              [BG_LoadTimestamp]
@@ -844,6 +914,20 @@ BEGIN
         BEGIN TRANSACTION;
 
         TRUNCATE TABLE [{productlaunchevent#stage#schema_name}].[STG_ST_ITEMUNITOFMEASURE];
+
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        IF XACT_STATE() <> 0
+        BEGIN
+            ROLLBACK TRANSACTION;
+        END;
+        THROW;
+    END CATCH;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
         INSERT
         INTO [{productlaunchevent#stage#schema_name}].[STG_ST_ITEMUNITOFMEASURE] WITH(TABLOCK) (
              [BG_LoadTimestamp]
@@ -965,6 +1049,20 @@ BEGIN
         BEGIN TRANSACTION;
 
         TRUNCATE TABLE [{productlaunchevent#stage#schema_name}].[STG_ST_LOYALTYCARD];
+
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        IF XACT_STATE() <> 0
+        BEGIN
+            ROLLBACK TRANSACTION;
+        END;
+        THROW;
+    END CATCH;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
         INSERT
         INTO [{productlaunchevent#stage#schema_name}].[STG_ST_LOYALTYCARD] WITH(TABLOCK) (
              [BG_LoadTimestamp]
@@ -1084,6 +1182,20 @@ BEGIN
         BEGIN TRANSACTION;
 
         TRUNCATE TABLE [{productlaunchevent#stage#schema_name}].[STG_ST_PHONENUMBER];
+
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        IF XACT_STATE() <> 0
+        BEGIN
+            ROLLBACK TRANSACTION;
+        END;
+        THROW;
+    END CATCH;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
         INSERT
         INTO [{productlaunchevent#stage#schema_name}].[STG_ST_PHONENUMBER] WITH(TABLOCK) (
              [BG_LoadTimestamp]
@@ -1200,6 +1312,20 @@ BEGIN
         BEGIN TRANSACTION;
 
         TRUNCATE TABLE [{productlaunchevent#stage#schema_name}].[STG_ST_POS];
+
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        IF XACT_STATE() <> 0
+        BEGIN
+            ROLLBACK TRANSACTION;
+        END;
+        THROW;
+    END CATCH;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
         INSERT
         INTO [{productlaunchevent#stage#schema_name}].[STG_ST_POS] WITH(TABLOCK) (
              [BG_LoadTimestamp]
@@ -1344,6 +1470,20 @@ BEGIN
         BEGIN TRANSACTION;
 
         TRUNCATE TABLE [{productlaunchevent#stage#schema_name}].[STG_ST_SALESTRANSACTION];
+
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        IF XACT_STATE() <> 0
+        BEGIN
+            ROLLBACK TRANSACTION;
+        END;
+        THROW;
+    END CATCH;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
         INSERT
         INTO [{productlaunchevent#stage#schema_name}].[STG_ST_SALESTRANSACTION] WITH(TABLOCK) (
              [BG_LoadTimestamp]

@@ -2060,6 +2060,20 @@ BEGIN
         IF @IncrementRowsInserted > 0
         BEGIN
             TRUNCATE TABLE [{productlaunchevent#mart#schema_name}].[DM_MF_Sales];
+
+            COMMIT TRANSACTION;
+        END TRY
+        BEGIN CATCH
+            IF XACT_STATE() <> 0
+            BEGIN
+                ROLLBACK TRANSACTION;
+            END;
+            THROW;
+        END CATCH;
+
+        BEGIN TRY
+            BEGIN TRANSACTION;
+
             INSERT
             INTO [{productlaunchevent#mart#schema_name}].[DM_MF_Sales] WITH(TABLOCK) (
                  [BG_LoadTimestamp]

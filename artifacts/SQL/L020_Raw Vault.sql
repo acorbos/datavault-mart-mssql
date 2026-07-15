@@ -100,7 +100,7 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Hub_HK]
+        ,0x00 AS [Hub_HK]
         ,N'Unknown' AS [BG_SourceSystem]
         ,N'19000101' AS [BG_ValidFromTimestamp]
         ,N'0' AS [BG_RowHash]
@@ -169,7 +169,7 @@ SELECT
     ,[ARTICLE_NUMBER_APPROX] AS [ARTICLE_NUMBER_APPROX]
     ,[ZIP_CODE] AS [ZIP_CODE]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_SAT_BRANCH]
-WHERE [Hub_HK] <> 0
+WHERE [Hub_HK] <> 0x00
 ;
 GO
 
@@ -336,7 +336,7 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Hub_HK]
+        ,0x00 AS [Hub_HK]
         ,N'Unknown' AS [BG_SourceSystem]
         ,0 AS [CUSTOMER_ID]
     ;
@@ -382,7 +382,7 @@ SELECT
     ,[BG_SourceSystem] AS [BG_SourceSystem]
     ,[CUSTOMER_ID] AS [CUSTOMER_ID]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_CUSTOMER]
-WHERE [Hub_HK] <> 0
+WHERE [Hub_HK] <> 0x00
 ;
 GO
 
@@ -399,7 +399,7 @@ SELECT
     ,[BG_Source].[BG_SourceSystem] AS [BG_SourceSystem]
     ,[BG_Source].[CUSTOMER_ID] AS [CUSTOMER_ID]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_CUSTOMER_Hashing] AS [BG_Source]
-LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_CUSTOMER] AS [BG_Target]
+LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_CUSTOMER_Result] AS [BG_Target]
    ON [BG_Source].[Hub_HK] = [BG_Target].[Hub_HK]
 WHERE [BG_Target].[Hub_HK] IS NULL
 ;
@@ -542,10 +542,10 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Hub_HK]
+        ,0x00 AS [Hub_HK]
         ,N'Unknown' AS [BG_SourceSystem]
         ,N'19000101' AS [BG_ValidFromTimestamp]
-        ,0 AS [BG_RowHash]
+        ,0x00 AS [BG_RowHash]
         ,N'Unknown' AS [ADDRESS_LINE1]
         ,N'Unknown' AS [ADDRESS_LINE2]
         ,N'Unknown' AS [ADDRESS_LINE3]
@@ -605,7 +605,7 @@ SELECT
     ,[ADDRESS_LINE3] AS [ADDRESS_LINE3]
     ,[ZIP_CODE] AS [ZIP_CODE]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_SAT_CUSTOMER_Address]
-WHERE [Hub_HK] <> 0
+WHERE [Hub_HK] <> 0x00
 ;
 GO
 
@@ -779,10 +779,10 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Hub_HK]
+        ,0x00 AS [Hub_HK]
         ,N'Unknown' AS [BG_SourceSystem]
         ,N'19000101' AS [BG_ValidFromTimestamp]
-        ,0 AS [BG_RowHash]
+        ,0x00 AS [BG_RowHash]
         ,N'Unknown' AS [CUSTOMER]
         ,N'Unknown' AS [CUSTOMER_TYPE]
         ,N'19000101' AS [CUSTOMER_SINCE]
@@ -839,7 +839,7 @@ SELECT
     ,[CUSTOMER_TYPE] AS [CUSTOMER_TYPE]
     ,[CUSTOMER_SINCE] AS [CUSTOMER_SINCE]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_SAT_CUSTOMER_Info]
-WHERE [Hub_HK] <> 0
+WHERE [Hub_HK] <> 0x00
 ;
 GO
 
@@ -997,7 +997,7 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Hub_HK]
+        ,0x00 AS [Hub_HK]
         ,N'Unknown' AS [BG_SourceSystem]
         ,0 AS [EMPLOYEE_ID]
     ;
@@ -1043,7 +1043,7 @@ SELECT
     ,[BG_SourceSystem] AS [BG_SourceSystem]
     ,[EMPLOYEE_ID] AS [EMPLOYEE_ID]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_EMPLOYEE]
-WHERE [Hub_HK] <> 0
+WHERE [Hub_HK] <> 0x00
 ;
 GO
 
@@ -1060,7 +1060,7 @@ SELECT
     ,[BG_Source].[BG_SourceSystem] AS [BG_SourceSystem]
     ,[BG_Source].[EMPLOYEE_ID] AS [EMPLOYEE_ID]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_EMPLOYEE_Hashing] AS [BG_Source]
-LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_EMPLOYEE] AS [BG_Target]
+LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_EMPLOYEE_Result] AS [BG_Target]
    ON [BG_Source].[Hub_HK] = [BG_Target].[Hub_HK]
 WHERE [BG_Target].[Hub_HK] IS NULL
 ;
@@ -1212,7 +1212,7 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Hub_HK]
+        ,0x00 AS [Hub_HK]
         ,N'Unknown' AS [BG_SourceSystem]
         ,N'19000101' AS [BG_ValidFromTimestamp]
         ,N'0' AS [BG_RowHash]
@@ -1284,7 +1284,7 @@ SELECT
     ,[ADDRESS_LINE3] AS [ADDRESS_LINE3]
     ,[ZIP_CODE] AS [ZIP_CODE]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_SAT_EMPLOYEE]
-WHERE [Hub_HK] <> 0
+WHERE [Hub_HK] <> 0x00
 ;
 GO
 
@@ -1454,7 +1454,7 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Hub_HK]
+        ,0x00 AS [Hub_HK]
         ,N'Unknown' AS [BG_SourceSystem]
         ,N'Unknown' AS [Name]
     ;
@@ -1500,7 +1500,7 @@ SELECT
     ,[BG_SourceSystem] AS [BG_SourceSystem]
     ,[Name] AS [Name]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_EMPLOYEE1]
-WHERE [Hub_HK] <> 0
+WHERE [Hub_HK] <> 0x00
 ;
 GO
 
@@ -1517,7 +1517,7 @@ SELECT
     ,[BG_Source].[BG_SourceSystem] AS [BG_SourceSystem]
     ,[BG_Source].[Name] AS [Name]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_EMPLOYEE1_Hashing] AS [BG_Source]
-LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_EMPLOYEE1] AS [BG_Target]
+LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_EMPLOYEE1_Result] AS [BG_Target]
    ON [BG_Source].[Hub_HK] = [BG_Target].[Hub_HK]
 WHERE [BG_Target].[Hub_HK] IS NULL
 ;
@@ -1644,7 +1644,7 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Hub_HK]
+        ,0x00 AS [Hub_HK]
         ,N'Unknown' AS [BG_SourceSystem]
         ,0 AS [ITEM_ID]
     ;
@@ -1690,7 +1690,7 @@ SELECT
     ,[BG_SourceSystem] AS [BG_SourceSystem]
     ,[ITEM_ID] AS [ITEM_ID]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_ITEM]
-WHERE [Hub_HK] <> 0
+WHERE [Hub_HK] <> 0x00
 ;
 GO
 
@@ -1707,7 +1707,7 @@ SELECT
     ,[BG_Source].[BG_SourceSystem] AS [BG_SourceSystem]
     ,[BG_Source].[ITEM_ID] AS [ITEM_ID]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_ITEM_Hashing] AS [BG_Source]
-LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_ITEM] AS [BG_Target]
+LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_ITEM_Result] AS [BG_Target]
    ON [BG_Source].[Hub_HK] = [BG_Target].[Hub_HK]
 WHERE [BG_Target].[Hub_HK] IS NULL
 ;
@@ -1847,7 +1847,7 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Hub_HK]
+        ,0x00 AS [Hub_HK]
         ,N'Unknown' AS [BG_SourceSystem]
         ,N'19000101' AS [BG_ValidFromTimestamp]
         ,N'0' AS [BG_RowHash]
@@ -1907,7 +1907,7 @@ SELECT
     ,[BASE_UOM] AS [BASE_UOM]
     ,[SALES_UOM] AS [SALES_UOM]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_SAT_ITEM]
-WHERE [Hub_HK] <> 0
+WHERE [Hub_HK] <> 0x00
 ;
 GO
 
@@ -2068,7 +2068,7 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Hub_HK]
+        ,0x00 AS [Hub_HK]
         ,N'Unknown' AS [BG_SourceSystem]
         ,0 AS [ITEM_ID]
         ,N'Unknown' AS [UOM]
@@ -2117,7 +2117,7 @@ SELECT
     ,[ITEM_ID] AS [ITEM_ID]
     ,[UOM] AS [UOM]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_ITEMUNITOFMEASURE]
-WHERE [Hub_HK] <> 0
+WHERE [Hub_HK] <> 0x00
 ;
 GO
 
@@ -2135,7 +2135,7 @@ SELECT
     ,[BG_Source].[ITEM_ID] AS [ITEM_ID]
     ,[BG_Source].[UOM] AS [UOM]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_ITEMUNITOFMEASURE_Hashing] AS [BG_Source]
-LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_ITEMUNITOFMEASURE] AS [BG_Target]
+LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_ITEMUNITOFMEASURE_Result] AS [BG_Target]
    ON [BG_Source].[Hub_HK] = [BG_Target].[Hub_HK]
 WHERE [BG_Target].[Hub_HK] IS NULL
 ;
@@ -2278,7 +2278,7 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Hub_HK]
+        ,0x00 AS [Hub_HK]
         ,N'Unknown' AS [BG_SourceSystem]
         ,N'19000101' AS [BG_ValidFromTimestamp]
         ,N'0' AS [BG_RowHash]
@@ -2339,7 +2339,7 @@ SELECT
     ,[BASE_UOM] AS [BASE_UOM]
     ,[QTY_PER_BASE_UOM] AS [QTY_PER_BASE_UOM]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_SAT_ITEMUNITOFMEASURE]
-WHERE [Hub_HK] <> 0
+WHERE [Hub_HK] <> 0x00
 ;
 GO
 
@@ -2497,7 +2497,7 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Hub_HK]
+        ,0x00 AS [Hub_HK]
         ,N'Unknown' AS [BG_SourceSystem]
         ,0 AS [LOYALTYCARD_ID]
     ;
@@ -2543,7 +2543,7 @@ SELECT
     ,[BG_SourceSystem] AS [BG_SourceSystem]
     ,[LOYALTYCARD_ID] AS [LOYALTYCARD_ID]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_LOYALTYCARD]
-WHERE [Hub_HK] <> 0
+WHERE [Hub_HK] <> 0x00
 ;
 GO
 
@@ -2560,7 +2560,7 @@ SELECT
     ,[BG_Source].[BG_SourceSystem] AS [BG_SourceSystem]
     ,[BG_Source].[LOYALTYCARD_ID] AS [LOYALTYCARD_ID]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_LOYALTYCARD_Hashing] AS [BG_Source]
-LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_LOYALTYCARD] AS [BG_Target]
+LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_LOYALTYCARD_Result] AS [BG_Target]
    ON [BG_Source].[Hub_HK] = [BG_Target].[Hub_HK]
 WHERE [BG_Target].[Hub_HK] IS NULL
 ;
@@ -2697,12 +2697,12 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Link_HK]
+        ,0x00 AS [Link_HK]
         ,N'Unknown' AS [BG_SourceSystem]
         ,0 AS [FK_CUSTOMER_CUSTOMER_ID]
-        ,0 AS [CUSTOMER_CUSTOMER_HK]
+        ,0x00 AS [CUSTOMER_CUSTOMER_HK]
         ,0 AS [FK_LOYALTYCARD_LOYALTYCARD_ID]
-        ,0 AS [LOYALTYCARD_LOYALTYCARD_HK]
+        ,0x00 AS [LOYALTYCARD_LOYALTYCARD_HK]
     ;
 
     COMMIT TRANSACTION;
@@ -2735,7 +2735,7 @@ FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#d
 ;
 GO
 
--- LinkresultView: Loyaltycard_Customer_Link Result View_1
+-- LinkResultView: Loyaltycard_Customer_Link Result View_1
 IF OBJECT_ID(N'[{productlaunchevent#rawvault#schema_name}].[RDV_LNK_Loyaltycard_Customer_Result]', N'V') IS NOT NULL
     DROP VIEW [{productlaunchevent#rawvault#schema_name}].[RDV_LNK_Loyaltycard_Customer_Result]
 ;
@@ -2752,7 +2752,7 @@ SELECT
     ,[FK_LOYALTYCARD_LOYALTYCARD_ID] AS [FK_LOYALTYCARD_LOYALTYCARD_ID]
     ,[LOYALTYCARD_LOYALTYCARD_HK] AS [LOYALTYCARD_LOYALTYCARD_HK]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_LNK_Loyaltycard_Customer]
-WHERE [Link_HK] <> 0
+WHERE [Link_HK] <> 0x00
 ;
 GO
 
@@ -2772,7 +2772,7 @@ SELECT
     ,[BG_Source].[FK_LOYALTYCARD_LOYALTYCARD_ID] AS [FK_LOYALTYCARD_LOYALTYCARD_ID]
     ,[BG_Source].[LOYALTYCARD_LOYALTYCARD_HK] AS [LOYALTYCARD_LOYALTYCARD_HK]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_LNK_Loyaltycard_Customer_Hashing] AS [BG_Source]
-LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_LNK_Loyaltycard_Customer] AS [BG_Target]
+LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_LNK_Loyaltycard_Customer_Result] AS [BG_Target]
    ON [BG_Source].[Link_HK] = [BG_Target].[Link_HK]
 WHERE [BG_Target].[Link_HK] IS NULL
 ;
@@ -2916,7 +2916,7 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Hub_HK]
+        ,0x00 AS [Hub_HK]
         ,N'19000101' AS [BG_ValidFromTimestamp]
         ,N'0' AS [BG_RowHash]
         ,0 AS [BG_Sequence]
@@ -2973,7 +2973,7 @@ SELECT
     ,[BG_SourceSystem] AS [BG_SourceSystem]
     ,[PHONE_NUMBER] AS [PHONE_NUMBER]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_MAS_PHONENUMBER]
-WHERE [Hub_HK] <> 0
+WHERE [Hub_HK] <> 0x00
 ;
 GO
 
@@ -3140,7 +3140,7 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Hub_HK]
+        ,0x00 AS [Hub_HK]
         ,N'Unknown' AS [BG_SourceSystem]
         ,0 AS [POS_ID]
     ;
@@ -3186,7 +3186,7 @@ SELECT
     ,[BG_SourceSystem] AS [BG_SourceSystem]
     ,[POS_ID] AS [POS_ID]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_POS]
-WHERE [Hub_HK] <> 0
+WHERE [Hub_HK] <> 0x00
 ;
 GO
 
@@ -3203,7 +3203,7 @@ SELECT
     ,[BG_Source].[BG_SourceSystem] AS [BG_SourceSystem]
     ,[BG_Source].[POS_ID] AS [POS_ID]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_POS_Hashing] AS [BG_Source]
-LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_POS] AS [BG_Target]
+LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_POS_Result] AS [BG_Target]
    ON [BG_Source].[Hub_HK] = [BG_Target].[Hub_HK]
 WHERE [BG_Target].[Hub_HK] IS NULL
 ;
@@ -3340,12 +3340,12 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Link_HK]
+        ,0x00 AS [Link_HK]
         ,N'Unknown' AS [BG_SourceSystem]
         ,0 AS [FK_BRANCH_BRANCH_ID]
-        ,0 AS [BRANCH_BRANCH_HK]
+        ,0x00 AS [BRANCH_BRANCH_HK]
         ,0 AS [FK_POS_POS_ID]
-        ,0 AS [POS_POS_HK]
+        ,0x00 AS [POS_POS_HK]
     ;
 
     COMMIT TRANSACTION;
@@ -3378,7 +3378,7 @@ FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#d
 ;
 GO
 
--- LinkresultView: POS_Branch_Link Result View_1
+-- LinkResultView: POS_Branch_Link Result View_1
 IF OBJECT_ID(N'[{productlaunchevent#rawvault#schema_name}].[RDV_LNK_POS_Branch_Result]', N'V') IS NOT NULL
     DROP VIEW [{productlaunchevent#rawvault#schema_name}].[RDV_LNK_POS_Branch_Result]
 ;
@@ -3395,7 +3395,7 @@ SELECT
     ,[FK_POS_POS_ID] AS [FK_POS_POS_ID]
     ,[POS_POS_HK] AS [POS_POS_HK]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_LNK_POS_Branch]
-WHERE [Link_HK] <> 0
+WHERE [Link_HK] <> 0x00
 ;
 GO
 
@@ -3415,7 +3415,7 @@ SELECT
     ,[BG_Source].[FK_POS_POS_ID] AS [FK_POS_POS_ID]
     ,[BG_Source].[POS_POS_HK] AS [POS_POS_HK]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_LNK_POS_Branch_Hashing] AS [BG_Source]
-LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_LNK_POS_Branch] AS [BG_Target]
+LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_LNK_POS_Branch_Result] AS [BG_Target]
    ON [BG_Source].[Link_HK] = [BG_Target].[Link_HK]
 WHERE [BG_Target].[Link_HK] IS NULL
 ;
@@ -3580,7 +3580,7 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Hub_HK]
+        ,0x00 AS [Hub_HK]
         ,N'Unknown' AS [BG_SourceSystem]
         ,0 AS [TRANSACTION_ID]
         ,0 AS [TRANSACTION_LINE_NO]
@@ -3635,7 +3635,7 @@ SELECT
     ,[TRANSACTION_TIME] AS [TRANSACTION_TIME]
     ,[POS_ID] AS [POS_ID]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_SALESTRANSACTION]
-WHERE [Hub_HK] <> 0
+WHERE [Hub_HK] <> 0x00
 ;
 GO
 
@@ -3655,7 +3655,7 @@ SELECT
     ,[BG_Source].[TRANSACTION_TIME] AS [TRANSACTION_TIME]
     ,[BG_Source].[POS_ID] AS [POS_ID]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_SALESTRANSACTION_Hashing] AS [BG_Source]
-LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_SALESTRANSACTION] AS [BG_Target]
+LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_HUB_SALESTRANSACTION_Result] AS [BG_Target]
    ON [BG_Source].[Hub_HK] = [BG_Target].[Hub_HK]
 WHERE [BG_Target].[Hub_HK] IS NULL
 ;
@@ -3805,22 +3805,22 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Link_HK]
+        ,0x00 AS [Link_HK]
         ,N'Unknown' AS [BG_SourceSystem]
         ,0 AS [FK_LOYALTYCARD_LOYALTYCARD_ID]
-        ,0 AS [LOYALTYCARD_LOYALTYCARD_HK]
+        ,0x00 AS [LOYALTYCARD_LOYALTYCARD_HK]
         ,0 AS [FK_ITEMUNITOFMEASURE_ITEM_ID]
         ,N'Unknown' AS [FK_ITEMUNITOFMEASURE_UOM]
-        ,0 AS [ITEMUNITOFMEASURE_ITEMUNITOFMEASURE_HK]
+        ,0x00 AS [ITEMUNITOFMEASURE_ITEMUNITOFMEASURE_HK]
         ,0 AS [FK_POS_POS_ID]
-        ,0 AS [POS_POS_HK]
+        ,0x00 AS [POS_POS_HK]
         ,0 AS [FK_ITEM_ITEM_ID]
-        ,0 AS [ITEM_ITEM_HK]
+        ,0x00 AS [ITEM_ITEM_HK]
         ,0 AS [FK_SALESTRANSACTION_TRANSACTION_ID]
         ,0 AS [FK_SALESTRANSACTION_TRANSACTION_LINE_NO]
         ,N'19000101' AS [FK_SALESTRANSACTION_TRANSACTION_TIME]
         ,0 AS [FK_SALESTRANSACTION_POS_ID]
-        ,0 AS [SALESTRANSACTION_SALESTRANSACTION_HK]
+        ,0x00 AS [SALESTRANSACTION_SALESTRANSACTION_HK]
     ;
 
     COMMIT TRANSACTION;
@@ -3863,7 +3863,7 @@ FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#d
 ;
 GO
 
--- LinkresultView: POS_SALES_Link Result View_1
+-- LinkResultView: POS_SALES_Link Result View_1
 IF OBJECT_ID(N'[{productlaunchevent#rawvault#schema_name}].[RDV_LNK_POS_SALES_Result]', N'V') IS NOT NULL
     DROP VIEW [{productlaunchevent#rawvault#schema_name}].[RDV_LNK_POS_SALES_Result]
 ;
@@ -3890,7 +3890,7 @@ SELECT
     ,[FK_SALESTRANSACTION_POS_ID] AS [FK_SALESTRANSACTION_POS_ID]
     ,[SALESTRANSACTION_SALESTRANSACTION_HK] AS [SALESTRANSACTION_SALESTRANSACTION_HK]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_LNK_POS_SALES]
-WHERE [Link_HK] <> 0
+WHERE [Link_HK] <> 0x00
 ;
 GO
 
@@ -3920,7 +3920,7 @@ SELECT
     ,[BG_Source].[FK_SALESTRANSACTION_POS_ID] AS [FK_SALESTRANSACTION_POS_ID]
     ,[BG_Source].[SALESTRANSACTION_SALESTRANSACTION_HK] AS [SALESTRANSACTION_SALESTRANSACTION_HK]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_LNK_POS_SALES_Hashing] AS [BG_Source]
-LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_LNK_POS_SALES] AS [BG_Target]
+LEFT OUTER JOIN [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_LNK_POS_SALES_Result] AS [BG_Target]
    ON [BG_Source].[Link_HK] = [BG_Target].[Link_HK]
 WHERE [BG_Target].[Link_HK] IS NULL
 ;
@@ -4092,7 +4092,7 @@ BEGIN TRY
     )
     SELECT
          N'19000101' AS [BG_LoadTimestamp]
-        ,0 AS [Hub_HK]
+        ,0x00 AS [Hub_HK]
         ,N'Unknown' AS [BG_SourceSystem]
         ,N'19000101' AS [BG_ValidFromTimestamp]
         ,N'0' AS [BG_RowHash]
@@ -4158,7 +4158,7 @@ SELECT
     ,[QUANTITY] AS [QUANTITY]
     ,[SALES_AMOUNT] AS [SALES_AMOUNT]
 FROM [{productlaunchevent#rawvault#server_name}].[{productlaunchevent#rawvault#database_name}].[{productlaunchevent#rawvault#schema_name}].[RDV_SAT_SALESTRANSACTION]
-WHERE [Hub_HK] <> 0
+WHERE [Hub_HK] <> 0x00
 ;
 GO
 
