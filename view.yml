@@ -4,6 +4,9 @@ views:
     description: 'Default view for data model.'
     default: true
     type: 'data-model'
+    businessConcepts:
+      - id: 'ddea529c-a416-4ba1-8154-c0e5f6000862'
+        name: 'bc'
     modelObjects:
       - id: '16f272ca-065d-4571-ba73-75ab85a845b9'
         collapsed: true
