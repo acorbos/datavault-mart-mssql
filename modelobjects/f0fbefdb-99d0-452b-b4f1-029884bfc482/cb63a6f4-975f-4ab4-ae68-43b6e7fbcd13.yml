@@ -218,11 +218,12 @@ terms:
     isBusinessKey: false
     isForeignKey: false
     isIdentity: false
-    isNullable: true
+    isNullable: false
     dataType:
       platformDataTypeId: 'ea625964-ee65-4825-8d1b-87ebbd7baa31'
       precision: 18
       scale: 2
+    propertyValues: []
   - id: 'aafbed7f-c1b5-4dca-bacb-54a665741963'
     name: 'QUANTITY'
     hiddenInSource: false
