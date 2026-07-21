@@ -56,20 +56,6 @@ terms:
     isNullable: true
     dataType:
       platformDataTypeId: '88718695-75e5-413d-a8e9-fa27fe064353'
-  - id: '2378d74a-239c-46e4-843a-7d08b5e998d8'
-    name: 'BG_RowHash'
-    description: 'Default term that stores the computed hash value for defined attributes'
-    defaultTermId: '2362debf-62f0-4e46-b0eb-bd221e3961eb'
-    hiddenInSource: false
-    hiddenInTarget: true
-    isBusinessKey: false
-    isDefaultTerm: true
-    isForeignKey: false
-    isIdentity: false
-    isNullable: false
-    dataType:
-      length: 20
-      platformDataTypeId: 'bdf6e2aa-9167-4949-9f69-735bbf516472'
   - id: '6a226327-3ed7-4fdf-a672-7cf044da255a'
     name: 'ITEMUNITOFMEASURE_SK'
     description: 'Default term with mart dimension identity'
@@ -140,6 +126,34 @@ terms:
     dataType:
       length: 10
       platformDataTypeId: '9245c3e9-05f8-4e48-962c-e1b3c49bc239'
+  - id: 'e6cf4811-48ba-4fc6-89b2-56f1b200fc40'
+    name: 'BG_RowHashScd1'
+    description: 'Default term that stores the computed hash value for Scd1 attributes'
+    defaultTermId: '1df6f52e-a677-4a2f-b2ed-343e9f52f743'
+    hiddenInSource: false
+    hiddenInTarget: true
+    isBusinessKey: false
+    isDefaultTerm: true
+    isForeignKey: false
+    isIdentity: false
+    isNullable: false
+    dataType:
+      length: 20
+      platformDataTypeId: '77e450ef-2083-4296-a00e-3da0da7ad152'
+  - id: '290524b9-2087-4a63-bfb6-091ad5876f32'
+    name: 'BG_RowHashScd2'
+    description: 'Default term that stores the computed hash value for Scd2 attributes'
+    defaultTermId: 'a2053c5d-c56a-4ba2-8871-558ee18f735c'
+    hiddenInSource: false
+    hiddenInTarget: true
+    isBusinessKey: false
+    isDefaultTerm: true
+    isForeignKey: false
+    isIdentity: false
+    isNullable: false
+    dataType:
+      length: 20
+      platformDataTypeId: '77e450ef-2083-4296-a00e-3da0da7ad152'
 dataflows:
   - id: '5614c6ab-70fa-4c79-88fe-de19c14d7cc7'
     name: 'Dataflow1'
@@ -163,7 +177,6 @@ dataflows:
           - termId: '6311b746-93f8-416e-97ce-982a3810d71d'
           - termId: '1d254ed4-7ce4-45e8-afed-1e1383781ca3'
           - termId: '8e005ab1-c76f-45c5-bc12-f5404b718811'
-          - termId: '2378d74a-239c-46e4-843a-7d08b5e998d8'
           - termId: '6a226327-3ed7-4fdf-a672-7cf044da255a'
           - expression: '29679b32-4de2-4757-8199-aef07313e398.9a19e4dc-dce2-4b35-b33a-cd64cdd439a8'
             termId: '7d4dbff3-3167-4d11-8fd4-092a22875860'
@@ -175,3 +188,5 @@ dataflows:
             termId: 'fdf4dc9f-6720-49fb-82b4-df9c5821bdd0'
           - expression: '12218307-c5e5-4226-a2ff-51e18a11ff2f.6d4f20e4-46a4-4d78-b956-7683dab456df'
             termId: 'e54ae76c-1241-4e53-9b91-a566a383709f'
+          - termId: 'e6cf4811-48ba-4fc6-89b2-56f1b200fc40'
+          - termId: '290524b9-2087-4a63-bfb6-091ad5876f32'

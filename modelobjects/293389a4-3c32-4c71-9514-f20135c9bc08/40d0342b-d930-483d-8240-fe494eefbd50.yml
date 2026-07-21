@@ -57,20 +57,6 @@ terms:
     isNullable: true
     dataType:
       platformDataTypeId: '88718695-75e5-413d-a8e9-fa27fe064353'
-  - id: 'c14f14f8-d1af-4bb7-b825-a41de17b7d20'
-    name: 'BG_RowHash'
-    description: 'Default term that stores the computed hash value for defined attributes'
-    defaultTermId: '2362debf-62f0-4e46-b0eb-bd221e3961eb'
-    hiddenInSource: false
-    hiddenInTarget: true
-    isBusinessKey: false
-    isDefaultTerm: true
-    isForeignKey: false
-    isIdentity: false
-    isNullable: false
-    dataType:
-      length: 20
-      platformDataTypeId: 'bdf6e2aa-9167-4949-9f69-735bbf516472'
   - id: '2a8ae269-2df2-477d-aa48-870e4213623c'
     name: 'BRANCH_SK'
     description: 'Default term with mart dimension identity'
@@ -164,6 +150,34 @@ terms:
     dataType:
       length: 20
       platformDataTypeId: '9245c3e9-05f8-4e48-962c-e1b3c49bc239'
+  - id: '09c1d0f8-3097-4f89-8975-03ce1a5204fe'
+    name: 'BG_RowHashScd1'
+    description: 'Default term that stores the computed hash value for Scd1 attributes'
+    defaultTermId: '1df6f52e-a677-4a2f-b2ed-343e9f52f743'
+    hiddenInSource: false
+    hiddenInTarget: true
+    isBusinessKey: false
+    isDefaultTerm: true
+    isForeignKey: false
+    isIdentity: false
+    isNullable: false
+    dataType:
+      length: 20
+      platformDataTypeId: '77e450ef-2083-4296-a00e-3da0da7ad152'
+  - id: '3e4ccd51-d701-49b9-b631-c7a8a440f145'
+    name: 'BG_RowHashScd2'
+    description: 'Default term that stores the computed hash value for Scd2 attributes'
+    defaultTermId: 'a2053c5d-c56a-4ba2-8871-558ee18f735c'
+    hiddenInSource: false
+    hiddenInTarget: true
+    isBusinessKey: false
+    isDefaultTerm: true
+    isForeignKey: false
+    isIdentity: false
+    isNullable: false
+    dataType:
+      length: 20
+      platformDataTypeId: '77e450ef-2083-4296-a00e-3da0da7ad152'
 dataflows:
   - id: '3d972855-04be-45c1-bc28-0f2b94330ce2'
     name: 'Dataflow1'
@@ -187,7 +201,6 @@ dataflows:
           - termId: '05b514b3-30e8-48da-a29b-16f050ff968e'
           - termId: '83f2e265-d354-4b3f-90ad-5a3d195d13fe'
           - termId: '0b67f9bb-8d11-4ef5-8e98-24efa7aee63f'
-          - termId: 'c14f14f8-d1af-4bb7-b825-a41de17b7d20'
           - termId: '2a8ae269-2df2-477d-aa48-870e4213623c'
           - expression: 'd84a1acc-23ec-4d7f-8a9f-8ce470fe198f.4b90df71-59d9-474f-8f7e-c509e757bb1b'
             termId: 'afa56e53-d271-4612-81e5-e68306140a9f'
@@ -203,4 +216,6 @@ dataflows:
             termId: '427f872a-39b9-455b-9ee1-bd9e20a64d58'
           - expression: '90481f6e-8042-40f3-8d1b-ec7ecf766133.7b9909c7-07b0-4f38-b0e9-a1f542f3da59'
             termId: '4ba710b3-ea7c-4aea-8cf8-6f4d4b76a711'
+          - termId: '09c1d0f8-3097-4f89-8975-03ce1a5204fe'
+          - termId: '3e4ccd51-d701-49b9-b631-c7a8a440f145'
 propertyValues: []
