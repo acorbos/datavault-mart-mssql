@@ -86,7 +86,7 @@ terms:
       platformDataTypeId: '88718695-75e5-413d-a8e9-fa27fe064353'
     propertyValues: []
   - id: '7f86301c-174b-423d-9911-0654083171e8'
-    name: 'FK_BRANCH_BRANCH_BK'
+    name: 'FK_BRANCH__BRANCH_BRANCH_BK'
     hiddenInSource: true
     hiddenInTarget: false
     isBusinessKey: false
@@ -97,7 +97,7 @@ terms:
     dataType:
       platformDataTypeId: '9d8d167b-ffbb-4498-8721-de74c859dad5'
   - id: '49484b53-d839-4028-9f78-a4d9e71b62f4'
-    name: 'BRANCH_BRANCH_SK'
+    name: 'BRANCH__BRANCH_SK'
     description: 'Default term with the identity of the referenced mart dimension'
     defaultTermId: '618f7171-3c96-4093-9f01-05b68d3ee3f1'
     hiddenInSource: false

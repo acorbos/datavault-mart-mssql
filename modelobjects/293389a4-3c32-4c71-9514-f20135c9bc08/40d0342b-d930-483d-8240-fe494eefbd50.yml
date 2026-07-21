@@ -1,5 +1,5 @@
 id: '40d0342b-d930-483d-8240-fe494eefbd50'
-name: 'BRANCH'
+name: 'BRANCH_'
 description: 'Generated Model Object from BRANCH'
 isDeactivated: false
 modelObjectTypeId: '293389a4-3c32-4c71-9514-f20135c9bc08'
@@ -58,7 +58,7 @@ terms:
     dataType:
       platformDataTypeId: '88718695-75e5-413d-a8e9-fa27fe064353'
   - id: '2a8ae269-2df2-477d-aa48-870e4213623c'
-    name: 'BRANCH_SK'
+    name: 'BRANCH__SK'
     description: 'Default term with mart dimension identity'
     defaultTermId: '3d0d1df1-e8a7-45bb-abf4-63b4ecdbc2ea'
     hiddenInSource: false
