@@ -1,1 +1,5 @@
+CustomDocumentationTemplates:
+  - Id: '6a714194-3728-44da-9c74-cf1802c0b4c4'
+    Name: 'with relations'
+    FileName: 'TemplateDocumentWithDataLineageAndRelations.docx'
 DefaultTerms: []
