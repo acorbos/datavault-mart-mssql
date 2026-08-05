@@ -96,6 +96,46 @@ terms:
     dataType:
       length: 20
       platformDataTypeId: '77e450ef-2083-4296-a00e-3da0da7ad152'
+  - id: '5ed1de7e-6098-4029-86f7-b44ee8b0c22d'
+    name: 'BG_DataQuality_ID'
+    description: 'Default term for the data quality row id'
+    defaultTermId: 'a36a696d-59f5-487e-a955-96c6c2f0bcad'
+    hiddenInSource: true
+    hiddenInTarget: true
+    isBusinessKey: false
+    isDefaultTerm: true
+    isForeignKey: false
+    isIdentity: true
+    isNullable: false
+    dataType:
+      platformDataTypeId: 'ad190237-5c2c-4a43-aa8c-3fda2081c1c6'
+  - id: '741ba2be-451c-4e3b-b793-ebf1ab797c97'
+    name: 'BG_ErrorCount'
+    description: 'Default term for the data quality error count'
+    defaultTermId: '27b8472b-1aec-4de0-9769-babc4a384c9a'
+    hiddenInSource: true
+    hiddenInTarget: true
+    isBusinessKey: false
+    isDefaultTerm: true
+    isForeignKey: false
+    isIdentity: false
+    isNullable: false
+    dataType:
+      platformDataTypeId: '9d8d167b-ffbb-4498-8721-de74c859dad5'
+  - id: '70afb7e8-f175-46b7-8c57-f70d3a0dbdac'
+    name: 'BG_ErrorDescription'
+    description: 'Default term for the data quality error description'
+    defaultTermId: '020b2582-0e66-4db8-9c9e-561fc42a749b'
+    hiddenInSource: true
+    hiddenInTarget: true
+    isBusinessKey: false
+    isDefaultTerm: true
+    isForeignKey: false
+    isIdentity: false
+    isNullable: true
+    dataType:
+      length: 4000
+      platformDataTypeId: 'bdf6e2aa-9167-4949-9f69-735bbf516472'
 dataflows:
   - id: '01e23375-ad6a-40ef-bc54-e5957fdaa417'
     name: 'Dataflow1'
@@ -116,6 +156,9 @@ dataflows:
           - expression: '9f359258-1eb0-45b6-8fcc-2fc646e04166.8008c783-9ff1-4572-97d1-f4fcfb06e285'
             termId: 'c6460c74-80f0-46f6-a650-2d9f6e549728'
           - termId: '1463d66d-8f2e-475f-b07c-10f712b2c6f8'
+          - termId: '5ed1de7e-6098-4029-86f7-b44ee8b0c22d'
+          - termId: '741ba2be-451c-4e3b-b793-ebf1ab797c97'
+          - termId: '70afb7e8-f175-46b7-8c57-f70d3a0dbdac'
 relationships:
   - id: 'c46fb38a-8b10-4e9c-a511-099a3e2661fc'
     referencedModelObjectId: '085450b6-3d3c-447e-a5aa-05ac2e509fbc'
@@ -138,3 +181,5 @@ relationships:
 propertyValues:
   - propertyId: 'b0ee14c8-5179-4123-bed8-c81d60a9a0a2'
     value: '<unselected>'
+  - propertyId: '9f5f2011-43d0-4509-a57c-d33ce191406a'
+    value: 'None'

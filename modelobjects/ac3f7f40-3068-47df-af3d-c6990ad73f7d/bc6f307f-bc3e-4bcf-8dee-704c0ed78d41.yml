@@ -54,6 +54,46 @@ terms:
     isNullable: true
     dataType:
       platformDataTypeId: '9d8d167b-ffbb-4498-8721-de74c859dad5'
+  - id: 'ee6f1515-e907-4b85-8b81-d160cff174ec'
+    name: 'BG_DataQuality_ID'
+    description: 'Default term for the data quality row id'
+    defaultTermId: 'a36a696d-59f5-487e-a955-96c6c2f0bcad'
+    hiddenInSource: true
+    hiddenInTarget: true
+    isBusinessKey: false
+    isDefaultTerm: true
+    isForeignKey: false
+    isIdentity: true
+    isNullable: false
+    dataType:
+      platformDataTypeId: 'ad190237-5c2c-4a43-aa8c-3fda2081c1c6'
+  - id: '82535892-7cd9-4014-af8a-8b86530a3d01'
+    name: 'BG_ErrorCount'
+    description: 'Default term for the data quality error count'
+    defaultTermId: '27b8472b-1aec-4de0-9769-babc4a384c9a'
+    hiddenInSource: true
+    hiddenInTarget: true
+    isBusinessKey: false
+    isDefaultTerm: true
+    isForeignKey: false
+    isIdentity: false
+    isNullable: false
+    dataType:
+      platformDataTypeId: '9d8d167b-ffbb-4498-8721-de74c859dad5'
+  - id: '3f0a7bb5-ffca-47e0-b929-46c7d696842e'
+    name: 'BG_ErrorDescription'
+    description: 'Default term for the data quality error description'
+    defaultTermId: '020b2582-0e66-4db8-9c9e-561fc42a749b'
+    hiddenInSource: true
+    hiddenInTarget: true
+    isBusinessKey: false
+    isDefaultTerm: true
+    isForeignKey: false
+    isIdentity: false
+    isNullable: true
+    dataType:
+      length: 4000
+      platformDataTypeId: 'bdf6e2aa-9167-4949-9f69-735bbf516472'
 dataflows:
   - id: '95d77aaf-f4f4-4e67-a9c7-7a7825714c56'
     name: 'Dataflow1'
@@ -70,6 +110,9 @@ dataflows:
           - termId: '1c5a8464-3a10-4f94-a43e-1067ace608ea'
           - expression: '884277d0-bc40-49fd-9f56-abf1952becda.cecf2ae4-31a1-4ee4-8ee6-dd3e9e905db8'
             termId: '49fb2e21-e13e-4365-b7b4-912807a14704'
+          - termId: 'ee6f1515-e907-4b85-8b81-d160cff174ec'
+          - termId: '82535892-7cd9-4014-af8a-8b86530a3d01'
+          - termId: '3f0a7bb5-ffca-47e0-b929-46c7d696842e'
 propertyValues:
   - propertyId: 'b0ee14c8-5179-4123-bed8-c81d60a9a0a2'
     value: '<unselected>'
