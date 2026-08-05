@@ -3,3 +3,8 @@ CustomDocumentationTemplates:
     Name: 'with relations'
     FileName: 'TemplateDocumentWithDataLineageAndRelations.docx'
 DefaultTerms: []
+PropertyMappings:
+  - InternalCode: 'b785316a-86f9-4749-aae3-182e20ddee31'
+    Name: 'LinkNulledBusinessKeyBehaviour - Project'
+    EntityTypeId: '012e1a4a-79e5-4d97-85c5-6747a0a34c42'
+    PropertyId: '2b41de3f-a477-4ff9-ba4f-e4b3119f6351'
