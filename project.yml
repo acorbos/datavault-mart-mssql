@@ -4,5 +4,5 @@ description: 'product-launch-event'
 version: 'v1.9'
 configuration:
   id: 'biGENIUS.Implementation.Generator.VaultAndMart.Mssql'
-  version: '2.0.0-rc00'
+  version: '2.0.0-rc01'
 propertyValues: []
