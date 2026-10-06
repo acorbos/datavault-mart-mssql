@@ -4,4 +4,5 @@ description: ''
 default: false
 note: ''
 type: 'data-pipe'
-modelObjects: []
+modelObjects:
+  - id: 'cfeb06c6-d7c4-4d31-9c31-768ae6e0faa6'
